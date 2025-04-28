@@ -23,6 +23,6 @@ pooja -- aboutus.html
          privacy.html
          error.html
 
-image path {{ asset('frontend/brandsparkz/assets/img/bin.svg') }}
+
 
 
