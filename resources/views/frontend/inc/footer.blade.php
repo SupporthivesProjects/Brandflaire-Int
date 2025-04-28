@@ -1,57 +1,65 @@
 
-<footer class="footer">
-    <img src="{{ asset('frontend/BrandSparkz/assets/img/mobo_footer_top_right.png') }}" alt="" class="img-fluid desktop_none footer_top_right_img">
-    <img src="{{ asset('frontend/BrandSparkz/assets/img/mobo_footer_bottom_left.png') }}" alt="" class="img-fluid desktop_none footer_bottom_left_img">
+<footer class="bd-footer">
+    <img src="{{ asset('frontend/Brandflaire/assest/images/testi-bg-1-1 1.png') }}" class="img-fluid d-block d-lg-none d-md-none bg-image">
+    <div class="container text-body-secondary">
+      <div class="row">
+        <div class="col-lg-6 col-md-12 col-12 mb-3 col-mo">
+          <a class="d-inline-flex align-items-center mb-2 text-body-emphasis text-decoration-none" href="/" aria-label="Bootstrap">
+            <img src="{{ asset('frontend/Brandflaire/assest/images/footer-logo.svg') }}" class="img-fluid">
+          </a>
+         <div>
+            <img src="{{ asset('frontend/Brandflaire/assest/images/Mastercard.svg') }}" class="img-fluid masrterimg">
+         </div>
+          <div class="list-unstyled small">
+                <h5>Follow Us:</h5>
+                <img src="{{ asset('frontend/Brandflaire/assest/images/white.svg') }}" class="img-fluid">
+                <img src="{{ asset('frontend/Brandflaire/assest/images/Instagram.svg') }}" class="img-fluid">
+          </div>
+        </div>
+        <div class="col-6 col-lg-3 col-md-12 col-12   order-lg-1 order-2">
+          <h5>Our Details</h5>
+          <ul class="list-unstyled-p">
+            <p>info@Brandflaire.com</p>
+            <p>132 Dartmouth Street Boston,</p>
+            <p>Massachusetts 02156</p>
+            <p>United States</p>
+          </ul>
+        </div>
+        
+        <div class="col-6 col-lg-3 col-md-12 col-12">
+          <h5>Our Solutions</h5>
+          <ul class="list-unstyled-main">
+            <li class=""><a href="{{ route('wdd') }}">UX/UI</a></li>
+            <li class=""><a href="{{ route('social') }}">Social Media </a></li>
+            <li class=""><a href="{{ route('em') }}">Email Marketing</a></li>
+            <li class=""><a href="{{ route('seo') }}">SEO</a></li>
+            <li class=""><a href="{{ route('ppc') }}">PPC</a></li>
+            <li class=""><a href="{{ route('orm') }}">ORM</a></li>
+          </ul>
+        </div>
+        
+      </div>
+    </div>
     <div class="container">
-        <div class="footer_main_bg">
-            <div class="footer_top">
-                <div class="footer_top_left">
-                    <img src="{{ asset('frontend/BrandSparkz/assets/img/footer_logo.svg') }}" alt="" class="img-fluid footer_logo">
-                    <img src="{{ asset('frontend/BrandSparkz/assets/img/mastercard.png') }}" alt="" class="img-fluid">
-                </div>
-                <div class="footer_top_right">
-                    <div class="footer_right_element">
-                        <p class="footer_element_title">Support Links</p>
-                        <div class="footer_link_div">
-                            <button class="btn footer_links"  onclick="window.location.href='{{ route('faqs') }}'" >FAQs</button>
-                            <button class="btn footer_links"  onclick="window.location.href='{{ route('termsandconditions') }}'">Terms & Conditions</button>
-                            <button class="btn footer_links"  onclick="window.location.href='{{ route('privacypolicy') }}'">Privacy Policy</button>
-                        </div>
-                    </div>
-                    <div class="footer_right_element">
-                        <p class="footer_element_title">Our Services</p>
-                        <div class="row">
-                            <div class="col-6">
-                                <div class="footer_link_div">
-                                    <button class="btn footer_links"  onclick="window.location.href='{{ route('seo') }}'">SEO</button>
-                                    <button class="btn footer_links"  onclick="window.location.href='{{ route('orm') }}'">ORM</button>
-                                    <button class="btn footer_links"  onclick="window.location.href='{{ route('em') }}'">Email&nbsp;Marketing</button>
-                                </div>
-                            </div>
-                            <div class="col-6">
-                                <div class="footer_link_div">
-                                    <button class="btn footer_links"  onclick="window.location.href='{{ route('ppc') }}'">Pay-Per-Click</button>
-                                    <button class="btn footer_links"  onclick="window.location.href='{{ route('wdd') }}'">UX/UI</button>
-                                    <button class="btn footer_links"  onclick="window.location.href='{{ route('social') }}'">Social Media</button>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                    <div class="footer_right_element">
-                        <p class="footer_element_title">Got Questions?</p>
-                        <div class="footer_link_div">
-                            <address class="footer_address">
-                                info@Brandsparkz.co <br>
-                                123 Main Street, <br>
-                                New York, <br>
-                                10030
-                            </address>
-                        </div>
+        <div class="col">
+            <div class="row">
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12 order-lg-0 order-1">
+                    <div class="col-red-div">
+                        <p>© {{ date('Y') }} Brandflaire.com. All Rights Reserved</p>
                     </div>
                 </div>
-            </div>
-            <div class="footer_bottom">
-                <p class="footer_copyright">Copyright © {{ date('Y') }} Brand Sparkz.</p>
+                <div class="col-lg-6 col-md-12 col-sm-12 col-12">
+                    <div class="footerullid">
+                        <ul>
+                            <li>
+                                <a href="{{ route('termsandconditions') }}">Terms and Conditions</a>
+                            </li>
+                            <li>
+                                <a href="{{ route('privacypolicy') }}">Privacy Policy</a>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
             </div>
         </div>
     </div>

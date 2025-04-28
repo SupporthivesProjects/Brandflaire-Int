@@ -3,11 +3,15 @@ rohit -- checkout.html
          email template
          forget and reset password.html
 
+pratibha --    social.html   
+                terms.html  
+                aboutus.html
+                login.html
+
 shivkumar -- seo.html
              ppc.html
-             social.html
              index.html
-             login.html
+             reset passwrord.html
 
 swarli -- orm.html
           em.html
@@ -15,13 +19,17 @@ swarli -- orm.html
           order history.html
           register .html    
 
-pooja -- aboutus.html
+pooja -- 
          contactus.html
          faq.html
          wdd.html
-         terms.html
          privacy.html
          error.html
+
+
+all pls listen koi bhi old code comment nahi rakhega reffer karo and delete kar do pr raise karte time
+
+image path {{ asset('frontend/Brandflaire/assest/images/brand.svg') }}
 
 
 

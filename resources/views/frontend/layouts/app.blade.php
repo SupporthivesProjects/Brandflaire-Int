@@ -10,10 +10,10 @@
     <meta name="robots" content="index, follow">
     <meta name="csrf-token" content="{{ csrf_token() }}">
 
-    <title>BrandSparkz</title>
+    <title>BrandFlaire</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Lingosphere/img/Fav.png') }}') }}">
+    <link rel="icon" type="image/x-icon" href="#">
 
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
@@ -28,14 +28,19 @@
     <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
 
 
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/dist/bootstrap/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/bootstrap.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/owl.carousel.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/owl.theme.default.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/swiper-bundle.min.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/aos.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/style.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/responsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/dhirajstyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/dhirajresponsive.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/rstyle.css') }}">
+    <link rel="stylesheet" href="{{ asset('frontend/Brandflaire/assest/css/s_style.css') }}">
 
-    
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/dist/owl-carousel/css/owl.carousel.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/main.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/m_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/sk_style.css') }}">
-    <link rel="stylesheet" href="{{ asset('frontend/BrandSparkz/assets/css/t_style.css') }}">
+
 
     <!-- Box Icons -->
     <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
@@ -60,277 +65,107 @@
     @endphp
     
 
-
-    {{-- new header code --}}
-
     <header class="fixed-top">
-        <div class="header_top">
-            <div class="container desktop_header p-0">
-                <div class="header_main_container">
-                    <div class="header_left">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset('frontend/BrandSparkz/assets/img/header_bg_trans_logo_.svg') }}" alt="" class="img-fluid header_logo">
+        <nav class="navbar navbar-expand-lg">
+            <div class="container">
+              <a class="navbar-brand" href="{{ route('home') }}">
+                <img src="{{ asset('frontend/Brandflaire/assest/images/brand.svg') }}" alt="" class="branlogo img-fluid">
+              </a>
+              <button class="navbar-toggler p-0"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{{ asset('frontend/Brandflaire/assest/images/Menu-Button.svg') }}" class="img-fluid" id="changetoggle">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Solutions
                         </a>
-                    </div>
-                    <div class="header_center">
-                        <button class="btn btn_header_link {{ request()->routeIs('aboutus') ? 'active' : '' }}"  onclick="window.location.href='{{ route( 'aboutus') }}'">
-                            About
-                        </button>
-                        <div class="header_center_bar"></div>
-                        <div class="service_drop_container">
-                            <button class="btn btn_header_drop" onclick="justDrop('service_drop', 'roter1', this)">
-                                Services
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter1">
-                            </button>
-                            <div class="dropped_div d-none" id="service_drop">
-                                <button class="btn btn_orange_header {{ request()->routeIs('seo') ? 'active' : '' }}" onclick="window.location.href='{{ route('seo') }}'">SEO</button>
-                                <button class="btn btn_orange_header {{ request()->routeIs('ppc') ? 'active' : '' }}" onclick="window.location.href='{{ route('ppc') }}'">PPC</button>
-                                <button class="btn btn_orange_header {{ request()->routeIs('orm') ? 'active' : '' }}" onclick="window.location.href='{{ route('orm') }}'">ORM</button>
-                                <button class="btn btn_orange_header {{ request()->routeIs('wdd') ? 'active' : '' }}" onclick="window.location.href='{{ route('wdd') }}'">UX/UI</button>
-                                <button class="btn btn_orange_header {{ request()->routeIs('em') ? 'active' : '' }}" onclick="window.location.href='{{ route('em') }}'">Email</button>
-                                <button class="btn btn_orange_header {{ request()->routeIs('social') ? 'active' : '' }}" onclick="window.location.href='{{ route('social') }}'">Social Media</button>
-                            </div>
-                        </div>
-                        <div class="header_center_bar"></div>
-                        <button class="btn btn_header_link {{ request()->routeIs('faqs') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'faqs') }}'">
-                            FAQ's
-                        </button>
-                        <div class="header_center_bar"></div>
-                        <button class="btn btn_header_link {{ request()->routeIs('contactus') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'contactus') }}'">
-                            Contact Us
-                        </button>
-                        <div class="header_center_bar"></div>
-                        @auth
-                            <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'dashboard') }}'">
-                                My Accont
-                            </button>
-                        @else
-                            <button class="btn btn_header_link {{ request()->routeIs('user.login') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'user.login') }}'">
-                                Login
-                            </button>
-                            <div class="header_center_bar"></div>
-                            <button class="btn btn_header_link {{ request()->routeIs('user.registration') ? 'active' : '' }}" onclick="window.location.href='{{ route( 'user.registration') }}'">
-                                Sign Up
-                            </button>
-                        @endauth
-                        <div class="header_center_bar"></div>
-                        <div class="currency_drop_container">
-                            <button class="btn btn_header_drop" onclick="justDrop('currency_drop', 'roter2', this)">
-                                {{ $currency_code }}
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/drop.svg') }}" alt="" class="img-fluid" id="roter2">
-                            </button>
-                            <div class="dropped_div d-none" id="currency_drop">
-                                @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
-                                    <button
-                                        class="btn btn_orange_header dropdown-item {{ $currency_code == $currency->code ? 'active' : '' }}"
-                                        data-currency="{{ $currency->code }}">
-                                        {{ $currency->code }} ({{ $currency->symbol }})
-                                    </button>
-                                @endforeach
-                            </div>
-                        </div>
-                    </div>
-                    <div class="header_right">
-                        <div class="cart_drop_container">
-                            <button class="btn btn_global" onclick="justDrop('cart_drop', 'roter5', this)"  >
-                                <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
-                                <div class="btn_global_inner">
-                                    <img src="{{ asset('frontend/BrandSparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
-                                    <p class="cart_text">View Cart</p>
-                                    <span>
-                                        {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
-                                    </span>
-                                </div>
-                            </button>
-                            <div class="cart_dropper_div d-none" id="cart_drop">
-                                @if (Session::has('cart') && count(Session::get('cart')) > 0)
-                                        @php
-                                           $total = 0;
-                                        @endphp
-                                    @foreach (Session::get('cart') as $key => $cartItem)
-                                        @php
-                                            $product = \App\Models\Product::find($cartItem['id']);
-                                            $total = $total + round(convert_price($cartItem['price']), 2);
-                                        @endphp
-                                <div class="cart_item">
-                                    
-                                    <div class="cart_item_left">
-                                        <p class="cart_item_title">
-                                            {{ $product->name }}
-                                        </p>
-                                        <div class="cart_item_values_div">
-                                            <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
-                                            <p class="cart_item_values"> {{ $product->subscription }}</p>
-                                            <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
-                                        </div>
-                                    </div>
-                                    <div class="cart_item_right">
-                                        <button class="btn">
-                                            <img src="{{ asset('frontend/brandsparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
-                                        </button>
-                                    </div>
-                                </div>
-                               @endforeach
-
-                                <div class="cart_footer">
-                                    <div class="cart_footer_top">
-                                        <p class="cart_item_values_bold">Subtotal</p>
-                                        <p class="cart_item_values_bold">{{ currency_symbol() }}{{ number_format($total,2) }}</p>
-                                    </div>
-                                    <div class="cart_footer_bottom">
-                                        <button class="btn btn_orange_transparent" onclick="justDrop('cart_drop', 'roter5', this)">Close</button>
-                                        <button class="btn btn_orange" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">Checkout</button>
-                                    </div>
-                                </div>
-                                @else
-                                    <div class="empty-cart">
-                                        <p>Your cart is empty</p>
-                                    </div>
-                                @endif
-                               
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <div class="container mobile_header p-0">
-                <div class="header_mobo_main">
-                    <div class="header_mobo_left">
-                        <a href="{{ route('home') }}">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/header_mobo_bg_trans_logo_.svg') }}" alt="" class="img-fluid">
-                        </a>
-                    </div>
-                    <div class="header_mobo_right">
-                        <div class="hamburger_menu">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/hamburger_logo.png') }}" alt="" class="img-fluid">
-                        </div>
-                        <div class="hamburger_menu_close" style="display: none;">
-                            <img src="{{ asset('frontend/brandsparkz/assets/img/hamburger_close.svg') }}" alt="" class="img-fluid">
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-        <div class="header_mobo_main_slide" style="display: none;">
-            <div class="header_main_mobo">
-                <button class="btn btn_header_link" onclick="window.location.href='{{ route(  'aboutus') }}'">
-                    About
-                </button>
-                <div class="service_drop_container">
-                    <button class="btn btn_header_drop" onclick="justDrop('service_drop_mob', 'roter3', this)">
-                        Services
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  id="roter3">
-                            <path d="M18 9L12 15L6 9" stroke="#3C3C3C" stroke-width="2"/>
-                        </svg>
-                    </button>
-                    <div class="dropped_div d-none" id="service_drop_mob">
-                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'seo') }}'">SEO</button>
-                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'ppc') }}'">PPC</button>
-                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'orm') }}'">ORM</button>
-                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'wdd') }}'">UX/UI</button>
-                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'em') }}'">Email</button>
-                        <button class="btn btn_orange_header" onclick="window.location.href='{{ route( 'social') }}'">Social Media</button>
-                    </div>
-                </div>
-                <button class="btn btn_header_link" onclick="window.location.href='{{ route( name: 'faqs') }}'">
-                    FAQs
-                </button>
-                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'contactus') }}'">
-                    Contact Us
-                </button>
-                @auth
-                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'dashboard') }}'">
-                   My Account
-                </button>
-                @else
-                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'user.login') }}'">
-                    Login 
-                </button>
-                <button class="btn btn_header_link" onclick="window.location.href='{{ route( 'user.registration') }}'">
-                    Sign up 
-                </button>
-                @endauth
-                <div class="currency_drop_container">
-                    <button class="btn btn_header_drop" onclick="justDrop('currency_drop_mobo', 'roter4', this)">
+                        <ul class="dropdown-menu dropdown-menu-servies">
+                            <li><a class="dropdown-item select-item" href="{{ route('seo') }}">SEO</a></li>
+                            <li><a class="dropdown-item" href="{{ route('ppc') }}">PPC</a></li>
+                            <li><a class="dropdown-item" href="{{ route('orm') }}">ORM</a></li>
+                            <li><a class="dropdown-item" href="{{ route('wdd') }}">UI/UX</a></li>
+                            <li><a class="dropdown-item" href="{{ route('social') }}">Social Media</a></li>
+                            <li><a class="dropdown-item" href="{{ route('em') }}">Email Marketing</a></li>
+                        </ul>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" aria-current="page" href="{{ route('aboutus') }}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('faqs') ? 'active' : '' }}" href="{{ route('faqs') }}">FAQ’s</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('contactus') ? 'active' : '' }}" href="{{ route('contactus') }}">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
                         {{ $currency_code }}
-                        <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="none"  id="roter4">
-                            <path d="M18 9L12 15L6 9" stroke="#3C3C3C" stroke-width="2"/>
-                        </svg>
-                    </button>
-                    <div class="dropped_div d-none" id="currency_drop_mobo">
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-cuurency" id="currency_drop">
                         @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
-                            <button
-                                class="btn btn_orange_header dropdown-item {{ $currency_code == $currency->code ? 'active' : '' }}"
-                                data-currency="{{ $currency->code }}">
-                                {{ $currency->code }} ({{ $currency->symbol }})
-                            </button>
-                        @endforeach
-                    </div>
-                </div>
-                <button class="btn btn_global cart_menu">
-                    <img src="{{ asset('frontend/brandsparkz/assets/img/btn_primary_pattern.png') }}" alt="" class="img-fluid btn_global_pattern">
-                    <div class="btn_global_inner w-100">
-                        <img src="{{ asset('frontend/brandsparkz/assets/img/cart_logo.svg') }}" alt="" class="img-fluid cart_logo">
-                        <p class="cart_text">View Cart</p>
-                        <span>
-                            {{ Session::has('cart') ? count(Session::get('cart')) : '0' }}
-                        </span>
-                    </div>
-                </button>
-            </div>
-        </div>
-        <div class="header_cart_mobo_main_slide" style="display: none;">
-            <div class="header_cart_main_mobo">
-                @if (Session::has('cart') && count(Session::get('cart')) > 0)
-                    @php
-                        $total1 = 0;
-                    @endphp
-                    @foreach (Session::get('cart') as $key => $cartItem)
-                        @php
-                            $product = \App\Models\Product::find($cartItem['id']);
-                            $total1 = $total1 + round(convert_price($cartItem['price']), 2);
-                        @endphp
-                        <div class="cart_item">
-                            <div class="cart_item_left">
-                                <p class="cart_item_title">
-                                    {{ $product->name }}
-                                </p>
-                                <div class="cart_item_values_div">
-                                    <p class="cart_item_values">x{{ $cartItem['quantity'] }}</p>
-                                    <p class="cart_item_values">{{ $product->subscription }}</p>
-                                    <p class="cart_item_values_bold">{{ single_price($cartItem['price']) }}</p>
+                           <li><a class="dropdown-item {{ $currency_code == $currency->code ? 'select-item' : '' }}" href="#" data-currency="{{ $currency->code }}">{{ $currency->code }} ({{ $currency->symbol }})</a></li>
+                         @endforeach
+                    </ul>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span>({{ Session::has('cart') ? count(Session::get('cart')) : '0' }})</span></a>
+                    <div class="cart-body" id="card-show">
+                      <div class="cartitem-box" id="cart_drop">
+                        @if (Session::has('cart') && count(Session::get('cart')) > 0)                          
+                            <div class="cartbox">
+                                @php
+                                    $total = 0;
+                                @endphp
+                                @foreach (Session::get('cart') as $key => $cartItem)
+                                    @php
+                                        $product = \App\Models\Product::find($cartItem['id']);
+                                        $total = $total + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
+                                    @endphp
+                                <div class="cart-item-details">
+                                    <div class="cart-item-ine">
+                                    <h5>{{ $product->name }}</h5> 
+                                    <h5>{{ single_price($cartItem['price']*$cartItem['quantity']) }}</h5>
+                                    <img src="{{ asset('frontend/Brandflaire/assest/images/delete-icon.svg') }}" class="img-fluid deleteicon" onclick="removeFromCart({{ $key }})">
+                                    </div>
+                                    <p>{{ $product->subscription }}</p>
+                                </div>
+                                @endforeach
+                            
+                                <div class="cart-subtotal">
+                                <h5>Total:</h4>
+                                <h4>{{ currency_symbol() }}{{ number_format($total,2) }}</h4>
+                                </div>
+                                <div class="cart-btn"> 
+                                <a href="{{ route( 'home') }}" class="btn btn-black-border">continue shopping</a>
+                                <a href="{{ route( 'checkout.shipping_info') }}" class="btn btn-black">checkout</a>
                                 </div>
                             </div>
-                            <div class="cart_item_right">
-                                <button class="btn">
-                                    <img src="{{ asset('frontend/brandsparkz/assets/img/bin.svg') }}" alt="" class="img-fluid" onclick="removeFromCart({{ $key }})">
-                                </button>
-                            </div>
-                        </div>
-                    @endforeach
-
-                    <div class="cart_footer">
-                        <div class="cart_footer_top">
-                            <p class="cart_item_values_bold">Subtotal</p>
-                            <p class="cart_item_values_bold">{{ currency_symbol() }}{{ number_format($total1,2) }}</p>
-                        </div>
-                        <div class="cart_footer_bottom">
-                            <button class="btn btn_orange_transparent" onclick="closeMobileCart()">Back to menu</button>
-                            <button class="btn btn_orange" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">Checkout</button>
-                        </div>
+                        @endif
+                      </div>
                     </div>
+                  </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-mo">
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'dashboard') }}">My Account</a>
+                    </li>
                     @else
-                    <div class="empty-cart">
-                        <p>Your cart is empty</p>
-                    </div>
-                @endif  
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'user.login') }}">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link btn btn-red" href="{{ route( 'user.registration') }}">Sign Up</a>
+                    </li>
+                    @endauth
+                </ul>
+              </div>
             </div>
-        </div>
+          </nav>
     </header>
 
    <!-- Success Modal -->
-
-
   <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
     <div class="modal-dialog modal-dialog-centered custom-modal-width2">
       <div class="modal-content custom_modal">
@@ -344,14 +179,14 @@
         </p>
         <div class="buttons_wala">
             <button class="btn btn_global2 on_phone"  onClick="window.location.reload();">
-                <img src="./assets/img/btn_primary_pattern2.png" alt="" class="img-fluid btn_global_pattern2">
+                <img src="#" alt="" class="img-fluid btn_global_pattern2">
                 <div class="btn_global_inner2 on_phone">
                     <p class="cart_text">continue shopping</p>
                 </div>
             </button>
             
         <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">
-            <img src="./assets/img/btn_primary_pattern.png" alt="" class="img-fluid btn_global_pattern">
+            <img src="#" alt="" class="img-fluid btn_global_pattern">
             <div class="btn_global_inner w-100">
                 
                 <p class="cart_text">Checkout</p>
@@ -375,17 +210,16 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 
 
-    
+    <script src="{{ asset('frontend/Brandflaire/assest/js/jquery-3.7.1.min.js') }}"></script>
+    <script src="{{ asset('frontend/Brandflaire/assest/js/owl.carousel.js') }}"></script>
+    <script src="{{ asset('frontend/Brandflaire/assest/js/popper.min.js') }}"></script>
+    <script src="{{ asset('frontend/Brandflaire/assest/js/bootstrap.bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/Brandflaire/assest/js/swiper-bundle.min.js') }}"></script>
+    <script src="{{ asset('frontend/Brandflaire/assest/js/aos.js') }}"></script>
+    <script src="{{ asset('frontend/Brandflaire/assest/js/main.js') }}"></script>
 
    
-    <script src="{{ asset('frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.popper.min.js') }}"></script>
-    <script src="{{ asset('frontend/BrandSparkz/assets/dist/bootstrap/js/bootstrap.min.js') }}"></script>
     
-    <!-- Owl Carousel JS Links -->
-    <script src="{{ asset('frontend/BrandSparkz/assets/dist/owl-carousel/js/owl.carousel.js') }}"></script>
-    
-    <!-- JS Link -->
-    <script src="{{ asset('frontend/BrandSparkz/assets/js/main.js') }}"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -485,7 +319,7 @@
 
         //Change Currency
         $(document).ready(function() {
-            $('#currency_drop button').on('click', function() {
+            $('#currency_drop a').on('click', function() {
                 let currency_code = $(this).data('currency');
 
                 $.ajax({
