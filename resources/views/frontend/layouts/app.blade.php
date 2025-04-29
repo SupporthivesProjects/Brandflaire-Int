@@ -171,38 +171,26 @@
           </nav>
     </header>
 
-   <!-- Success Modal -->
-  <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal-width2">
-      <div class="modal-content custom_modal">
-
-        <h1 class="modal_tt">
-            Added to Cart
-        </h1>
-
-        <p class="modal_pp">
-            Your chosen service has successfully been added to the cart.
-        </p>
-        <div class="buttons_wala">
-            <button class="btn btn_global2 on_phone"  onClick="window.location.reload();">
-                <img src="#" alt="" class="img-fluid btn_global_pattern2">
-                <div class="btn_global_inner2 on_phone">
-                    <p class="cart_text">continue shopping</p>
+   <!-- Cart Modal -->
+   <div class="modal" id="customModal">
+    <div class="modal-dialog modal-dialog-centered seomodal_outline">
+        <div class="modal-content seomodal_content">
+            <!-- Modal body -->
+            <div class="modal-body seomodal_body">
+                <div class="s7_modaltitlebar">
+                    <h2 class="s7_modaltitle">Added to cart</h2>
+                    <p class="s7_modalsubtitle">Your chosen service has successfully been added to the cart.</p>
                 </div>
-            </button>
-            
-        <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">
-            <img src="#" alt="" class="img-fluid btn_global_pattern">
-            <div class="btn_global_inner w-100">
-                
-                <p class="cart_text">Checkout</p>
+                <div class="cart_modalbtnbar">
+                    <button type="button" class="bnt service_s7btnwhite" onClick="window.location.reload();">Continue Shopping</button>
+                    <button type="button" class="bnt service_s7btn" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">Checkout</button>
+                </div>
             </div>
-    </button>
         </div>
-       
-      </div>
     </div>
-  </div>
+</div>
+
+
 
   
   
