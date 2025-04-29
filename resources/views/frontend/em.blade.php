@@ -2000,7 +2000,7 @@
                             <li class="nav-item" role="presentation">
                                 <button class="service_tabbtn" id="pills-three-tab" data-bs-toggle="pill"
                                     data-bs-target="#pills-three" type="button" role="tab" aria-controls="pills-three"
-                                    aria-selected="false">3&nbsp;Months</button>
+                                    aria-selected="true">3&nbsp;Months</button>
                             </li>
                             <li class="nav-item" role="presentation">
                                 <button class="service_tabbtn" id="pills-six-tab" data-bs-toggle="pill"
