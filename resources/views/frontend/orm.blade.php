@@ -13,21 +13,21 @@
                 </div>
                 <div class="seo_s1featuresbar">
                     <div class="seo_s1featuresitem">
-                        <img src="./assest/images/s1_featuresicon.svg">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/s1_featuresicon.svg') }}">
                         <p class="seo_s1featurestitle">Guaranteed Fixed Prices</p>
                     </div>
                     <div class="seo_s1featuresitem">
-                        <img src="./assest/images/s1_featuresicon.svg">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/s1_featuresicon.svg') }}">
                         <p class="seo_s1featurestitle">Zero Setup Fees</p>
                     </div>
                     <div class="seo_s1featuresitem">
-                        <img src="./assest/images/s1_featuresicon.svg">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/s1_featuresicon.svg') }}">
                         <p class="seo_s1featurestitle">No Hidden Costs</p>
                     </div>
                 </div>
                 <div class="seo_s1btnbar">
                     <a href="#pricing" class="btn custom-btn-img">Go To Packages And Pricing
-                        <img src="./assest/images/seo_s1btnarrow.svg" alt="arrow" class="arrow-img">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/seo_s1btnarrow.svg') }}" alt="arrow" class="arrow-img">
                     </a>
                 </div>
             </div>
@@ -40,11 +40,11 @@
     <section class="service_s2">
         <div class="service_c2">
             <div class="seo_s2redimgbar">
-                <img class="seo_s2redimg mobile_none" src="./assest/images/service_s2particle.svg">
-                <img class="seo_s2redimg desktop_none" src="./assest/images/service_s2particlemob.png">
+                <img class="seo_s2redimg mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s2particle.svg') }}">
+                <img class="seo_s2redimg desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s2particlemob.png') }}">
             </div>
-            <img class="seo_s2img mobile_none" src="./assest/images/orm_s2img.png">
-            <img class="seo_s2img desktop_none" src="./assest/images/orm_s2imgmob.png">
+            <img class="seo_s2img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/orm_s2img.png') }}">
+            <img class="seo_s2img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/orm_s2imgmob.png') }}">
             <div class="servic_c2contentbar">
                 <div class="service_s2titlebar">
                     <h2 class="service_s2title">what is ORM?</h2>
@@ -74,30 +74,30 @@
             <div class="service_s3cardbar">
                 <div class="service_s3card service_s3card1">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/orm_s3card1.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/orm_s3card1.svg') }}">
                         <p class="service_s3cardtext">Article<br>Writing</p>
                     </div>
                 </div>
                 <div class="service_s3card service_s3card2">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/orm_s3card2.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/orm_s3card2.svg') }}">
                         <p class="service_s3cardtext">Email<br>Creation</p>
                     </div>
                 </div>
                 <div class="service_s3card service_s3card3">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/orm_s3card3.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/orm_s3card3.svg') }}">
                         <p class="service_s3cardtext">Monthly<br>Reports</p>
                     </div>
                 </div>
                 <div class="service_s3card service_s3card4">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/orm_s3card4.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/orm_s3card4.svg') }}">
                         <p class="service_s3cardtext">Blog Website<br>Profiles</p>
                     </div>
                 </div>
             </div>
-            <button type="button" class="btn service_s3btn">Explore More Features</button>
+            <button type="button" class="btn service_s3btn" onclick="location.href='{{route('aboutus') }}'">Explore More Features</button>
         </div>
     </section>
     <!-- Service Section 3 End -->
@@ -108,7 +108,7 @@
             <h2 class="service_s4title">The brand Flaire Process</h2>
             <div class="service_s4cardbar">
                 <div class="service_s4card">
-                    <img class="service_s4card1img img-fluid" src="./assest/images/service_s4card1img.png">
+                    <img class="service_s4card1img img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_s4card1img.png') }}">
                     <div class="service_s4cardtitlebar">
                         <h3 class="service_s4cardtitle">We Discuss</h3>
                         <p class="service_s4subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
@@ -116,7 +116,7 @@
                     </div>
                 </div>
                 <div class="service_s4card">
-                    <img class="service_s4card2img img-fluid" src="./assest/images/service_s4card2img.png">
+                    <img class="service_s4card2img img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_s4card2img.png') }}">
                     <div class="service_s4cardtitlebar">
                         <h3 class="service_s4cardtitle">We Get To Work</h3>
                         <p class="service_s4subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
@@ -124,7 +124,7 @@
                     </div>
                 </div>
                 <div class="service_s4card">
-                    <img class="service_s4card3img img-fluid" src="./assest/images/service_s4card3img.png">
+                    <img class="service_s4card3img img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_s4card3img.png') }}">
                     <div class="service_s4cardtitlebar">
                         <h3 class="service_s4cardtitle">You See Results</h3>
                         <p class="service_s4subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
@@ -157,20 +157,20 @@
                         nunc. Dictum quisque tincidunt dictumst ut.</p>
                 </div>
             </div>
-            <img class="service_s5img mobile_none" src="./assest/images/orm_s5img.png">
-            <img class="service_s5img desktop_none" src="./assest/images/orm_s5imgmob.png">
+            <img class="service_s5img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/orm_s5img.png') }}">
+            <img class="service_s5img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/orm_s5imgmob.png') }}">
             <div class="service_s5patternbar mobile_none">
-                <img class="service_s5pattern" src="./assest/images/service_s5pattern.svg">
+                <img class="service_s5pattern" src="{{ asset('frontend/Brandflaire/assest/images/service_s5pattern.svg') }}">
             </div>
         </div>
     </section>
     <!-- Service Section 5 End -->
 
     <!-- Service Section 6 Start -->
-    <section class="service_s6">
+    <section class="service_s6" id="pricing">
         <div class="service_s6topbar">
-            <img class="mobile_none" src="./assest/images/orm_s6img.png">
-            <img class="desktop_none" src="./assest/images/orm_s6imgmob.png">
+            <img class="mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/orm_s6img.png') }}">
+            <img class="desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/orm_s6imgmob.png') }}">
             <div class="service_s6titlemain">
                 <div class="service_s6titlebar">
                     <h2 class="service_s6title">Choose Your ORM Plan</h2>
@@ -212,11 +212,12 @@
                 <div class="service_s6tabcontentbar">
                     <div class="tab_contentbar tab-content">
                         <div class="tab-content" id="pills-tabContent">
+                            {{-- 1st Month --}}
                             <div class="tab-pane fade show active service_contentmain" id="pills-one" role="tabpanel"
                                 aria-labelledby="pills-one-tab">
                                 <div class="service_tabcontent table-responsive">
                                     <table class="table table-borderless mb-0 service_table table-striped">
-                                        <thead class="service_table_header">
+                                         <thead class="service_table_header">
                                             <tr class="align-middle">
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle"></p>
@@ -230,334 +231,198 @@
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Gold</p>
                                                 </th>
-                                                <th scope="col" class="text-center">
+                                                {{-- <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Diamond</p>
                                                 </th>
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Master</p>
-                                                </th>
+                                                </th> --}}
                                             </tr>
                                         </thead>
                                         <tbody class="service_table_body">
                                             <tr class="align-middle">
                                                 <td class="text-start">
-                                                    <p class="service_table_bodytext">free setup</p>
+                                                    <p class="service_table_bodytext">Phrases Protected And Monitored</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '1' : ($key == 1 ? '3' : '7') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+
+                                            <tr class="align-middle">
+                                                <td class="text-start">
+                                                    <p class="service_table_bodytext">Web Search Position</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? 'Top 150' : 'Top 250' }}</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
                                             <tr class="align-middle">
                                                 <td class="text-start">
-                                                    <p class="service_table_bodytext">audits</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">blogs / news site outreach</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">press release creation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">national / international SEO</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">your keyword / phrase</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">1</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">3</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">5</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">7</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">9</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">keyword analysis</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">link building</p>
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">content optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">monthly blog posting</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">blog optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">setup</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">competitor analysis</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">technical optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start service_table_bodysecondlast">
-                                                    <p class="service_table_bodytext">Price</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
+                                                    <p class="service_table_bodytext">Article Writing</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 1 ? '3 Article 15x' : '1 Article 15x' }}</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
                                             <tr class="align-middle">
                                                 <td>
-                                                    <p class="service_bodytext"></p>
+                                                    <p class="service_bodytitle">Number Of Directories Appeared On</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">100</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Social Media Account Creation (Instagram, Twitter, TikTok, FB)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '2' : ($key == 1 ? '3' : '4') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Blog Website Profiles (Wordpress, Blogspot, Tumbler Etc)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key < 2 ? '1' : '3' }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Blog Posts</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '3' : ($key == 1 ? '5' : '9') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">RSS (Straightforward Syndication)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '10' : ($key == 1 ? '15' : '20') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Business Listings & Reviews (TrustPilot, ResellerRatings)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Monthly Accomplishment Report</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Email Creation</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Online Chat Profiles Set Up (Yahoo, Skype, Teams)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        @if ($key == 0)
+                                                            {{-- <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                        @else
+                                                            <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                        @endif
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Telephone Setup</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        @if ($key == 0)
+                                                            {{-- <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                        @else
+                                                            <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                        @endif
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            
+                                                <tr class="align-middle">
+                                                    <td class="text-start service_table_bodysecondlast">
+                                                        <p class="service_table_bodytext">Price</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(254.4), 2) }}</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(486.03), 2) }}</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(684.67), 2) }}</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="align-middle">
+                                                    <td>
+                                                        <p class="service_bodytext"></p>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+                            {{-- 3rd Month --}}
                             <div class="tab-pane fade service_contentmain" id="pills-three" role="tabpanel"
                                 aria-labelledby="pills-three-tab">
                                 <div class="service_tabcontent table-responsive">
@@ -576,334 +441,198 @@
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Gold</p>
                                                 </th>
-                                                <th scope="col" class="text-center">
+                                                {{-- <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Diamond</p>
                                                 </th>
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Master</p>
-                                                </th>
+                                                </th> --}}
                                             </tr>
                                         </thead>
                                         <tbody class="service_table_body">
                                             <tr class="align-middle">
                                                 <td class="text-start">
-                                                    <p class="service_table_bodytext">free setup</p>
+                                                    <p class="service_table_bodytext">Phrases Protected And Monitored</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '1' : ($key == 1 ? '3' : '7') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+
+                                            <tr class="align-middle">
+                                                <td class="text-start">
+                                                    <p class="service_table_bodytext">Web Search Position</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? 'Top 150' : 'Top 250' }}</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
                                             <tr class="align-middle">
                                                 <td class="text-start">
-                                                    <p class="service_table_bodytext">audits</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">blogs / news site outreach</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">press release creation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">national / international SEO</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">your keyword / phrase</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">1</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">3</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">5</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">7</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">9</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">keyword analysis</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">link building</p>
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">content optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">monthly blog posting</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">blog optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">setup</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">competitor analysis</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">technical optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start service_table_bodysecondlast">
-                                                    <p class="service_table_bodytext">Price</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
+                                                    <p class="service_table_bodytext">Article Writing</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 1 ? '3 Article 15x' : '1 Article 15x' }}</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
                                             <tr class="align-middle">
                                                 <td>
-                                                    <p class="service_bodytext"></p>
+                                                    <p class="service_bodytitle">Number Of Directories Appeared On</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">100</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Social Media Account Creation (Instagram, Twitter, TikTok, FB)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '2' : ($key == 1 ? '3' : '4') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Blog Website Profiles (Wordpress, Blogspot, Tumbler Etc)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key < 2 ? '1' : '3' }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Blog Posts</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '3' : ($key == 1 ? '5' : '9') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">RSS (Straightforward Syndication)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '10' : ($key == 1 ? '15' : '20') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Business Listings & Reviews (TrustPilot, ResellerRatings)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Monthly Accomplishment Report</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Email Creation</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Online Chat Profiles Set Up (Yahoo, Skype, Teams)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        @if ($key == 0)
+                                                            {{-- <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                        @else
+                                                            <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                        @endif
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Telephone Setup</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        @if ($key == 0)
+                                                            {{-- <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                        @else
+                                                            <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                        @endif
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            
+                                                <tr class="align-middle">
+                                                    <td class="text-start service_table_bodysecondlast">
+                                                        <p class="service_table_bodytext">Price</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(749.06), 2) }}</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(1443.94), 2) }}</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(2039.89), 2) }}</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="align-middle">
+                                                    <td>
+                                                        <p class="service_bodytext"></p>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                                 </div>
                             </div>
+                            {{-- 6th Month --}}
                             <div class="tab-pane fade service_contentmain" id="pills-six" role="tabpanel"
                                 aria-labelledby="pills-six-tab">
                                 <table class="table table-borderless mb-0 service_table table-striped">
@@ -921,333 +650,197 @@
                                             <th scope="col" class="text-center">
                                                 <p class="service_tabletitle">Gold</p>
                                             </th>
-                                            <th scope="col" class="text-center">
+                                            {{-- <th scope="col" class="text-center">
                                                 <p class="service_tabletitle">Diamond</p>
                                             </th>
                                             <th scope="col" class="text-center">
                                                 <p class="service_tabletitle">Master</p>
-                                            </th>
+                                            </th> --}}
                                         </tr>
                                     </thead>
                                     <tbody class="service_table_body">
                                         <tr class="align-middle">
                                             <td class="text-start">
-                                                <p class="service_table_bodytext">free setup</p>
+                                                <p class="service_table_bodytext">Phrases Protected And Monitored</p>
                                             </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key == 0 ? '1' : ($key == 1 ? '3' : '7') }}</p>
+                                                </td>
+                                            @endforeach
+                                        </tr>
+
+                                        <tr class="align-middle">
+                                            <td class="text-start">
+                                                <p class="service_table_bodytext">Web Search Position</p>
                                             </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key == 0 ? 'Top 150' : 'Top 250' }}</p>
+                                                </td>
+                                            @endforeach
                                         </tr>
                                         <tr class="align-middle">
                                             <td class="text-start">
-                                                <p class="service_table_bodytext">audits</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                            </td>
-                                            <td class="text-center">
-                                            </td>
-                                            <td class="text-center">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">blogs / news site outreach</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">press release creation</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">national / international SEO</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">national</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">national</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">national</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">national</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">national</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">your keyword / phrase</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">1</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">3</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">5</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">7</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <p class="service_table_bodytext">9</p>
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">keyword analysis</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">link building</p>
-                                            </td>
-                                            <td class="text-center">
-                                            </td>
-                                            <td class="text-center">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">content optimisation</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">monthly blog posting</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">blog optimisation</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">setup</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">competitor analysis</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start">
-                                                <p class="service_table_bodytext">technical optimisation</p>
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                            <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                            </td>
-                                        </tr>
-                                        <tr class="align-middle">
-                                            <td class="text-start service_table_bodysecondlast">
-                                                <p class="service_table_bodytext">Price</p>
-                                            </td>
-                                            <td class="text-center service_table_bodysecondlast">
-                                                <p class="service_table_bodyprice">£100.00</p>
-                                            </td>
-                                            <td class="text-center service_table_bodysecondlast">
-                                                <p class="service_table_bodyprice">£100.00</p>
-                                            </td>
-                                            <td class="text-center service_table_bodysecondlast">
-                                                <p class="service_table_bodyprice">£100.00</p>
-                                            </td>
-                                            <td class="text-center service_table_bodysecondlast">
-                                                <p class="service_table_bodyprice">£100.00</p>
-                                            </td>
-                                            <td class="text-center service_table_bodysecondlast">
-                                                <p class="service_table_bodyprice">£100.00</p>
-                                            </td>
+                                                <p class="service_table_bodytext">Article Writing</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key == 1 ? '3 Article 15x' : '1 Article 15x' }}</p>
+                                                </td>
+                                            @endforeach
                                         </tr>
                                         <tr class="align-middle">
                                             <td>
-                                                <p class="service_bodytext"></p>
+                                                <p class="service_bodytitle">Number Of Directories Appeared On</p>
                                             </td>
-                                            <td class="text-center">
-                                                <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                            </td>
-                                            <td class="text-center">
-                                                <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                            </td>
-                                            <td class="text-center">
-                                                <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                            </td>
-                                            <td class="text-center">
-                                                <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                            </td>
-                                            <td class="text-center">
-                                                <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">100</p>
+                                                </td>
+                                            @endforeach
                                         </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Social Media Account Creation (Instagram, Twitter, TikTok, FB)</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key == 0 ? '2' : ($key == 1 ? '3' : '4') }}</p>
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Blog Website Profiles (Wordpress, Blogspot, Tumbler Etc)</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key < 2 ? '1' : '3' }}</p>
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Blog Posts</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key == 0 ? '3' : ($key == 1 ? '5' : '9') }}</p>
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">RSS (Straightforward Syndication)</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    <p class="service_bodytext">{{ $key == 0 ? '10' : ($key == 1 ? '15' : '20') }}</p>
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Business Listings & Reviews (TrustPilot, ResellerRatings)</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $product)
+                                                <td class="text-center">
+                                                    <img class="img-fluid"
+                                                        src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Monthly Accomplishment Report</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $product)
+                                                <td class="text-center">
+                                                    <img class="img-fluid"
+                                                        src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Email Creation</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $product)
+                                                <td class="text-center">
+                                                    <img class="img-fluid"
+                                                        src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Online Chat Profiles Set Up (Yahoo, Skype, Teams)</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    @if ($key == 0)
+                                                        {{-- <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                    @else
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    @endif
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        <tr class="align-middle">
+                                            <td>
+                                                <p class="service_bodytitle">Telephone Setup</p>
+                                            </td>
+                                            @foreach ($ormProducts['1_month'] as $key => $product)
+                                                <td class="text-center">
+                                                    @if ($key == 0)
+                                                        {{-- <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                    @else
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    @endif
+                                                </td>
+                                            @endforeach
+                                        </tr>
+                                        
+                                            <tr class="align-middle">
+                                                <td class="text-start service_table_bodysecondlast">
+                                                    <p class="service_table_bodytext">Price</p>
+                                                </td>
+                                                <td class="text-center service_table_bodysecondlast">
+                                                    <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(1483.99), 2) }}</p>
+                                                </td>
+                                                <td class="text-center service_table_bodysecondlast">
+                                                    <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(2873.75), 2) }}</p>
+                                                </td>
+                                                <td class="text-center service_table_bodysecondlast">
+                                                    <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(4065.66), 2) }}</p>
+                                                </td>
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytext"></p>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                    data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                    data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                </td>
+                                                <td class="text-center">
+                                                    <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                    data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                </td>
+                                            </tr>
                                     </tbody>
                                 </table>
                             </div>
+                            {{-- 12th Month --}}
                             <div class="tab-pane fade service_contentmain" id="pills-twelve" role="tabpanel"
                                 aria-labelledby="pills-twelve-tab">
                                 <div class="service_tabcontent table-responsive">
@@ -1266,330 +859,193 @@
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Gold</p>
                                                 </th>
-                                                <th scope="col" class="text-center">
+                                                {{-- <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Diamond</p>
                                                 </th>
                                                 <th scope="col" class="text-center">
                                                     <p class="service_tabletitle">Master</p>
-                                                </th>
+                                                </th> --}}
                                             </tr>
                                         </thead>
                                         <tbody class="service_table_body">
                                             <tr class="align-middle">
                                                 <td class="text-start">
-                                                    <p class="service_table_bodytext">free setup</p>
+                                                    <p class="service_table_bodytext">Phrases Protected And Monitored</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '1' : ($key == 1 ? '3' : '7') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+
+                                            <tr class="align-middle">
+                                                <td class="text-start">
+                                                    <p class="service_table_bodytext">Web Search Position</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? 'Top 150' : 'Top 250' }}</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
                                             <tr class="align-middle">
                                                 <td class="text-start">
-                                                    <p class="service_table_bodytext">audits</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">blogs / news site outreach</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">press release creation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">national / international SEO</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">national</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">your keyword / phrase</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">1</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">3</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">5</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">7</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <p class="service_table_bodytext">9</p>
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">keyword analysis</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">link building</p>
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">content optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">monthly blog posting</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">blog optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">setup</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">competitor analysis</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start">
-                                                    <p class="service_table_bodytext">technical optimisation</p>
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                                <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
-                                                </td>
-                                            </tr>
-                                            <tr class="align-middle">
-                                                <td class="text-start service_table_bodysecondlast">
-                                                    <p class="service_table_bodytext">Price</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
-                                                <td class="text-center service_table_bodysecondlast">
-                                                    <p class="service_table_bodyprice">£100.00</p>
-                                                </td>
+                                                    <p class="service_table_bodytext">Article Writing</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 1 ? '3 Article 15x' : '1 Article 15x' }}</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
                                             <tr class="align-middle">
                                                 <td>
-                                                    <p class="service_bodytext"></p>
+                                                    <p class="service_bodytitle">Number Of Directories Appeared On</p>
                                                 </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
-                                                <td class="text-center">
-                                                    <button type="button" class="btn service_tablebtn" data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
-                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">100</p>
+                                                    </td>
+                                                @endforeach
                                             </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Social Media Account Creation (Instagram, Twitter, TikTok, FB)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '2' : ($key == 1 ? '3' : '4') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Blog Website Profiles (Wordpress, Blogspot, Tumbler Etc)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key < 2 ? '1' : '3' }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Blog Posts</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '3' : ($key == 1 ? '5' : '9') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">RSS (Straightforward Syndication)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        <p class="service_bodytext">{{ $key == 0 ? '10' : ($key == 1 ? '15' : '20') }}</p>
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Business Listings & Reviews (TrustPilot, ResellerRatings)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Monthly Accomplishment Report</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Email Creation</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $product)
+                                                    <td class="text-center">
+                                                        <img class="img-fluid"
+                                                            src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Online Chat Profiles Set Up (Yahoo, Skype, Teams)</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        @if ($key == 0)
+                                                            {{-- <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                        @else
+                                                            <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                        @endif
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            <tr class="align-middle">
+                                                <td>
+                                                    <p class="service_bodytitle">Telephone Setup</p>
+                                                </td>
+                                                @foreach ($ormProducts['1_month'] as $key => $product)
+                                                    <td class="text-center">
+                                                        @if ($key == 0)
+                                                            {{-- <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_wrong.svg') }}"> --}}
+                                                        @else
+                                                            <img class="img-fluid"
+                                                                src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
+                                                        @endif
+                                                    </td>
+                                                @endforeach
+                                            </tr>
+                                            
+                                                <tr class="align-middle">
+                                                    <td class="text-start service_table_bodysecondlast">
+                                                        <p class="service_table_bodytext">Price</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(2953.85), 2) }}</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(5733.38), 2) }}</p>
+                                                    </td>
+                                                    <td class="text-center service_table_bodysecondlast">
+                                                        <p class="service_table_bodyprice">{{ currency_symbol() }}{{ round(convert_price(8117.18), 2) }}</p>
+                                                    </td>
+                                                </tr>
+                                                <tr class="align-middle">
+                                                    <td>
+                                                        <p class="service_bodytext"></p>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                    <td class="text-center">
+                                                        <button type="button" class="btn service_tablebtn" onclick="addToCart1Step({{ $product->id }})"
+                                                        data-bs-toggle="modal" data-bs-target="#s6Modal">Add to cart</button>
+                                                    </td>
+                                                </tr>
                                         </tbody>
                                     </table>
                                 </div>
@@ -1605,8 +1061,8 @@
     <!-- Service Section 7 Start -->
     <section class="service_s7">
         <div class="service_c7">
-            <img class="service_s7img mobile_none" src="./assest/images/service_s7img.png">
-            <img class="service_s7img desktop_none" src="./assest/images/service_s7imgmob.png">
+            <img class="service_s7img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7img.png') }}">
+            <img class="service_s7img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7imgmob.png') }}">
             <div class="service_s7contentbar">
                 <div class="service_s7formbar">
                     <div class="service_s7titlebar">
@@ -1615,38 +1071,48 @@
                             custom package. Simply upload a document of your brief and our team will get back to you.
                         </p>
                     </div>
-                    <form class="service_s7bottom">
+                    <form class="service_s7bottom" id="requestform1" action="{{ route('contactus.store') }}" method="post" enctype="multipart/form-data" onsubmit="return check_agree1(this);">
+                        @csrf
+                        <input type="hidden" name="from_page" form="requestform1" value="service">
                         <div class="service_s7textboxbar">
                             <div class="service_s7textboxline">
-                                <input type="text" class="form-control service_s7textbox" id="" placeholder="Full Name">
-                                <input type="text" class="form-control service_s7textbox" id=""
+                                <input type="text" class="form-control service_s7textbox" id="fullname" name="fullname" form="requestform1" required placeholder="Full Name">
+                                <input type="text" class="form-control service_s7textbox" id="email" name="email" form="requestform1"
                                     placeholder="Email Address">
                             </div>
                             <div class="service_s7textboxline">
                                 <div class="w-100">
-                                    <input type="text" class="form-control service_s7textbox" id="" placeholder="Phone">
+                                    <input type="text" class="form-control service_s7textbox" id="phone" name="phone" form="requestform1" required placeholder="Phone">
                                 </div>
                                 <div class="w-100">
-                                    <input type="file" name="file" id="file" class="inputfile w-100"
+                                    {{-- <input type="file" id="document" name="document"  form="requestform1" required class="inputfile w-100"
+                                        data-multiple-caption="{count} files selected" multiple onclick="field_box_file()" />
+                                    <label class="upload_label w-100" for="file"><span>Upload your brief</span><img
+                                            src="{{ asset('frontend/Brandflaire/assest/images/upload_icon.svg') }}"></label> --}}
+
+                                    <input type="file" name="file" id="file" class="inputfile w-100" form="requestform1" required
                                         data-multiple-caption="{count} files selected" multiple />
                                     <label class="upload_label w-100" for="file"><span>Upload your brief</span><img
-                                            src="./assest/images/upload_icon.svg"></label>
+                                            src="{{ asset('frontend/Brandflaire/assest/images/upload_icon.svg') }}"></label>
                                 </div>
+                                
                             </div>
                         </div>
                         <div class="supported_checkboxline">
                             <div class="form-check supported_check">
-                                <input class="form-check-input supported_checkbox" type="checkbox">
+                                <input class="form-check-input supported_checkbox" type="checkbox"  id="terms" name="terms" form="requestform1">
                                 <div class=" d-flex justify-content-between w-100">
-                                    <label class="supported_checkboxtext" for="loginCheck">By ticking this box, you
-                                        agree to the <a href="" class="supported_checklink">Terms & Conditions</a> & <a
-                                            href="" class="supported_checklink">Privacy Policy.</a>
+                                    <label class="supported_checkboxtext" for="terms">By ticking this box, you
+                                        agree to the <a href="{{ route('termsandconditions') }}" class="supported_checklink">Terms & Conditions</a> & <a
+                                        href="{{ route('privacypolicy') }}" class="supported_checklink">Privacy Policy.</a>
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        <img src="./assest/images/reCAPTCHA.png">
-                        <button type="button" class="bnt service_s7btn" data-bs-toggle="modal"
+                        {{-- <img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png') }}"> --}}
+                        <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+                                <div class="h-captcha" form="requestform1" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
+                        <button class="bnt service_s7btn" data-bs-toggle="modal" type="submit" form="requestform1"
                             data-bs-target="#s7Modal">submit request</button>
                     </form>
                 </div>
