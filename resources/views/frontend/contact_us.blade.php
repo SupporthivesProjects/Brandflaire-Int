@@ -143,7 +143,10 @@
             </div>
         </div>
     </section>
-
+@endsection   
+@section('scripts')   
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function check_agree(form) {
             console.log(form.email.valid);

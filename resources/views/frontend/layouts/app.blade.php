@@ -109,7 +109,7 @@
                     </ul>
                 </li>
                   <li class="nav-item">
-                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span>({{ Session::has('cart') ? count(Session::get('cart')) : '0' }})</span></a>
+                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span id="cart_items_sidenav2">({{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }})</span></a>
                     <div class="cart-body" id="card-show">
                       <div class="cartitem-box" id="cart_drop">
                                                
@@ -189,6 +189,46 @@
         </div>
     </div>
 </div>
+
+<div class="modal fade custom-packege-modal contactsuccess" id="succadded" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <div class="modal-body">
+            <img src="#" class="calender-img" alt="">
+            <h4 class="fs-36-24 gilroy-medium fw-normal ls-3 blue-0F2 text-center" id="carttitle">Contact Form Submitted !</h4>
+            <p class="fx-16 gilroy-regular fw-normal" id="cartdescription">
+               Thank you for contacting us! We will get back to you soon.
+            </p>
+           
+                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="{{ asset('frontend/BrandBeKnown/images/button-arrow.svg') }}" alt=""></button>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade custom-packege-modal packagesuccess" id="succadded" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <div class="modal-body">
+            <img src="#" class="calender-img" alt="">
+            <h4 class="fs-36-24 gilroy-medium fw-normal ls-3 blue-0F2 text-center" id="carttitle">Contact Form Submitted !</h4>
+            <p class="fx-16 gilroy-regular fw-normal" id="cartdescription">
+               Thank you for contacting us! We will get back to you soon.
+            </p>
+           
+                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="{{ asset('frontend/BrandBeKnown/images/button-arrow.svg') }}" alt=""></button>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
 
 
 
@@ -484,25 +524,32 @@
     </script>
 
     <script>
-        function show_purchase_history_details(order_id)
-    {
-        $('#order-details-modal-body').html(null);
+        function show_purchase_history_details(order_id) {
+            $('#order-details-modal-body').html(null);
 
-        if(!$('#modal-size').hasClass('modal-lg')){
-            $('#modal-size').addClass('modal-lg');
+            if (!$('#modal-size').hasClass('modal-lg')) {
+                $('#modal-size').addClass('modal-lg');
+            }
+
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('purchase_history.details') }}',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    order_id: order_id
+                },
+                success: function(data) {
+                    $('#order-details-modal-body').html(data);
+                    $('#order_details').modal("show");
+                    $('.c-preloader').hide();
+                },
+                error: function(xhr) {
+                    console.error('Error loading purchase details:', xhr.responseText);
+                }
+            });
         }
-
-        $.post('{{ route('purchase_history.details') }}', { _token : '{{ @csrf_token() }}', order_id : order_id}, function(data){
-            $('#order-details-modal-body').html(data);
-            $('#order_details').modal("show");
-            $('.c-preloader').hide();
-        });
-    }
     </script>
 
-   
-    
-   
 
 
     @yield('scripts')
