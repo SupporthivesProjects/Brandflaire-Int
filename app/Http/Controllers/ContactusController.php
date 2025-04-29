@@ -128,7 +128,7 @@ class ContactUSController extends Controller
             // For the WDD page form (service page)
             if ($request->from_page == 'service') {
                 $rules['phone'] = 'required';
-                $rules['document'] = 'required|file|max:10240'; // 10MB max file size
+                $rules['document'] = 'nullable|file|max:10240'; // 10MB max file size
             }
 
             return $request->validate($rules);
@@ -166,9 +166,9 @@ class ContactUSController extends Controller
         try {
             if (!$request->hasFile('document')) {
                 // For service page form, document is required
-                if ($request->from_page == 'service') {
-                    throw new \Exception('Document upload is required');
-                }
+                // if ($request->from_page == 'service') {
+                //     throw new \Exception('Document upload is required');
+                // }
                 return null;
             }
 
@@ -225,3 +225,4 @@ class ContactUSController extends Controller
         return $fromPage == 'contactus' ? 'contactsuccess' : 'packagesuccess';
     }
 }
+
