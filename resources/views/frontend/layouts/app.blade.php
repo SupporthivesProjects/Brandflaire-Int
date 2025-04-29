@@ -81,12 +81,12 @@
                             Our Solutions
                         </a>
                         <ul class="dropdown-menu dropdown-menu-servies">
-                            <li><a class="dropdown-item select-item" href="{{ route('seo') }}">SEO</a></li>
-                            <li><a class="dropdown-item" href="{{ route('ppc') }}">PPC</a></li>
-                            <li><a class="dropdown-item" href="{{ route('orm') }}">ORM</a></li>
-                            <li><a class="dropdown-item" href="{{ route('wdd') }}">UI/UX</a></li>
-                            <li><a class="dropdown-item" href="{{ route('social') }}">Social Media</a></li>
-                            <li><a class="dropdown-item" href="{{ route('em') }}">Email Marketing</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('seo') ? 'select-item' : '' }}" href="{{ route('seo') }}">SEO</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('ppc') ? 'select-item' : '' }}" href="{{ route('ppc') }}">PPC</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('orm') ? 'select-item' : '' }}" href="{{ route('orm') }}">ORM</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('wdd') ? 'select-item' : '' }}" href="{{ route('wdd') }}">UI/UX</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('social') ? 'select-item' : '' }}" href="{{ route('social') }}">Social Media</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('em') ? 'select-item' : '' }}" href="{{ route('em') }}">Email Marketing</a></li>
                         </ul>
                     </li>
                   <li class="nav-item">
@@ -112,8 +112,9 @@
                     <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span>({{ Session::has('cart') ? count(Session::get('cart')) : '0' }})</span></a>
                     <div class="cart-body" id="card-show">
                       <div class="cartitem-box" id="cart_drop">
-                        @if (Session::has('cart') && count(Session::get('cart')) > 0)                          
+                                               
                             <div class="cartbox">
+                                @if (Session::has('cart') && count(Session::get('cart')) > 0)   
                                 @php
                                     $total = 0;
                                 @endphp
@@ -140,8 +141,13 @@
                                 <a href="{{ route( 'home') }}" class="btn btn-black-border">continue shopping</a>
                                 <a href="{{ route( 'checkout.shipping_info') }}" class="btn btn-black">checkout</a>
                                 </div>
+                                @else
+                                    <div class="empty-cart">
+                                        <p>Your cart is empty</p>
+                                    </div>
+                                @endif
                             </div>
-                        @endif
+                       
                       </div>
                     </div>
                   </li>
