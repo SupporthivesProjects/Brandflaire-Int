@@ -1820,21 +1820,21 @@
                 </div>
                 <div class="seo_s1featuresbar">
                     <div class="seo_s1featuresitem">
-                        <img src="./assest/images/s1_featuresicon.svg">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/s1_featuresicon.svg') }}">
                         <p class="seo_s1featurestitle">Guaranteed Fixed Prices</p>
                     </div>
                     <div class="seo_s1featuresitem">
-                        <img src="./assest/images/s1_featuresicon.svg">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/s1_featuresicon.svg') }}">
                         <p class="seo_s1featurestitle">Zero Setup Fees</p>
                     </div>
                     <div class="seo_s1featuresitem">
-                        <img src="./assest/images/s1_featuresicon.svg">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/s1_featuresicon.svg') }}">
                         <p class="seo_s1featurestitle">No Hidden Costs</p>
                     </div>
                 </div>
                 <div class="seo_s1btnbar">
                     <a href="#pricing" class="btn custom-btn-img">Go To Packages And Pricing
-                        <img src="./assest/images/seo_s1btnarrow.svg" alt="arrow" class="arrow-img">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/seo_s1btnarrow.svg') }}" alt="arrow" class="arrow-img">
                     </a>
                 </div>
             </div>
@@ -1847,11 +1847,11 @@
     <section class="service_s2">
         <div class="service_c2">
             <div class="seo_s2redimgbar">
-                <img class="seo_s2redimg mobile_none" src="./assest/images/service_s2particle.svg">
-                <img class="seo_s2redimg desktop_none" src="./assest/images/service_s2particlemob.png">
+                <img class="seo_s2redimg mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s2particle.svg') }}">
+                <img class="seo_s2redimg desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s2particlemob.png') }}">
             </div>
-            <img class="seo_s2img mobile_none" src="./assest/images/em_s2img.png">
-            <img class="seo_s2img desktop_none" src="./assest/images/em_s2imgmob.png">
+            <img class="seo_s2img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/em_s2img.png') }}">
+            <img class="seo_s2img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/em_s2imgmob.png') }}">
             <div class="servic_c2contentbar">
                 <div class="service_s2titlebar">
                     <h2 class="service_s2title">what is Email marketing?</h2>
@@ -1881,25 +1881,25 @@
             <div class="service_s3cardbar">
                 <div class="service_s3card service_s3card1">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/em_s3card1.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/em_s3card1.svg') }}">
                         <p class="service_s3cardtext">Advanced<br>Link Tracking</p>
                     </div>
                 </div>
                 <div class="service_s3card service_s3card2">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/em_s3card2.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/em_s3card2.svg') }}">
                         <p class="service_s3cardtext">Automated<br>Emails</p>
                     </div>
                 </div>
                 <div class="service_s3card service_s3card3">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/em_s3card3.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/em_s3card3.svg') }}">
                         <p class="service_s3cardtext">Customizable<br>Templates</p>
                     </div>
                 </div>
                 <div class="service_s3card service_s3card4">
                     <div class="service_s3cardinner">
-                        <img class="service_s3cardicon" src="./assest/images/em_s3card4.svg">
+                        <img class="service_s3cardicon" src="{{ asset('frontend/Brandflaire/assest/images/em_s3card4.svg') }}">
                         <p class="service_s3cardtext">A/B<br>Testing</p>
                     </div>
                 </div>
@@ -1915,7 +1915,7 @@
             <h2 class="service_s4title">The brand Flaire Process</h2>
             <div class="service_s4cardbar">
                 <div class="service_s4card">
-                    <img class="service_s4card1img img-fluid" src="./assest/images/service_s4card1img.png">
+                    <img class="service_s4card1img img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_s4card1img.png') }}">
                     <div class="service_s4cardtitlebar">
                         <h3 class="service_s4cardtitle">We Discuss</h3>
                         <p class="service_s4subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
@@ -1923,7 +1923,7 @@
                     </div>
                 </div>
                 <div class="service_s4card">
-                    <img class="service_s4card2img img-fluid" src="./assest/images/service_s4card2img.png">
+                    <img class="service_s4card2img img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_s4card2img.png') }}">
                     <div class="service_s4cardtitlebar">
                         <h3 class="service_s4cardtitle">We Get To Work</h3>
                         <p class="service_s4subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
@@ -1931,7 +1931,7 @@
                     </div>
                 </div>
                 <div class="service_s4card">
-                    <img class="service_s4card3img img-fluid" src="./assest/images/service_s4card3img.png">
+                    <img class="service_s4card3img img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_s4card3img.png') }}">
                     <div class="service_s4cardtitlebar">
                         <h3 class="service_s4cardtitle">You See Results</h3>
                         <p class="service_s4subtitle">Lorem ipsum dolor sit amet, consectetur adipiscing elit. Amet
@@ -1964,10 +1964,10 @@
                         nunc. Dictum quisque tincidunt dictumst ut.</p>
                 </div>
             </div>
-            <img class="service_s5img mobile_none" src="./assest/images/em_s5img.png">
-            <img class="service_s5img desktop_none" src="./assest/images/em_s5imgmob.png">
+            <img class="service_s5img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/em_s5img.png') }}">
+            <img class="service_s5img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/em_s5imgmob.png') }}">
             <div class="service_s5patternbar mobile_none">
-                <img class="service_s5pattern" src="./assest/images/service_s5pattern.svg">
+                <img class="service_s5pattern" src="{{ asset('frontend/Brandflaire/assest/images/service_s5pattern.svg') }}">
             </div>
         </div>
     </section>
@@ -1976,8 +1976,8 @@
     <!-- Service Section 6 Start -->
     <section class="service_s6">
         <div class="service_s6topbar">
-            <img class="mobile_none" src="./assest/images/em_s6img.png">
-            <img class="desktop_none" src="./assest/images/em_s6imgmob.png">
+            <img class="mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/em_s6img.png') }}">
+            <img class="desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/em_s6imgmob.png') }}">
             <div class="service_s6titlemain">
                 <div class="service_s6titlebar">
                     <h2 class="service_s6title">Choose Your Email marketing Plan</h2>
@@ -2051,19 +2051,19 @@
                                                     <p class="service_table_bodytext">free setup</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2071,10 +2071,10 @@
                                                     <p class="service_table_bodytext">audits</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
                                                 </td>
@@ -2088,19 +2088,19 @@
                                                     <p class="service_table_bodytext">blogs / news site outreach</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2108,19 +2108,19 @@
                                                     <p class="service_table_bodytext">press release creation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2168,19 +2168,19 @@
                                                     <p class="service_table_bodytext">keyword analysis</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2192,13 +2192,13 @@
                                                 <td class="text-center">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2206,19 +2206,19 @@
                                                     <p class="service_table_bodytext">content optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2226,19 +2226,19 @@
                                                     <p class="service_table_bodytext">monthly blog posting</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2246,19 +2246,19 @@
                                                     <p class="service_table_bodytext">blog optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2266,19 +2266,19 @@
                                                     <p class="service_table_bodytext">setup</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2286,19 +2286,19 @@
                                                     <p class="service_table_bodytext">competitor analysis</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2306,19 +2306,19 @@
                                                     <p class="service_table_bodytext">technical optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2397,19 +2397,19 @@
                                                     <p class="service_table_bodytext">free setup</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2417,10 +2417,10 @@
                                                     <p class="service_table_bodytext">audits</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
                                                 </td>
@@ -2434,19 +2434,19 @@
                                                     <p class="service_table_bodytext">blogs / news site outreach</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2454,19 +2454,19 @@
                                                     <p class="service_table_bodytext">press release creation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2514,19 +2514,19 @@
                                                     <p class="service_table_bodytext">keyword analysis</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2538,13 +2538,13 @@
                                                 <td class="text-center">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2552,19 +2552,19 @@
                                                     <p class="service_table_bodytext">content optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2572,19 +2572,19 @@
                                                     <p class="service_table_bodytext">monthly blog posting</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2592,19 +2592,19 @@
                                                     <p class="service_table_bodytext">blog optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2612,19 +2612,19 @@
                                                     <p class="service_table_bodytext">setup</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2632,19 +2632,19 @@
                                                     <p class="service_table_bodytext">competitor analysis</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2652,19 +2652,19 @@
                                                     <p class="service_table_bodytext">technical optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -2742,19 +2742,19 @@
                                                 <p class="service_table_bodytext">free setup</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2762,10 +2762,10 @@
                                                 <p class="service_table_bodytext">audits</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
                                             </td>
@@ -2779,19 +2779,19 @@
                                                 <p class="service_table_bodytext">blogs / news site outreach</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2799,19 +2799,19 @@
                                                 <p class="service_table_bodytext">press release creation</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2859,19 +2859,19 @@
                                                 <p class="service_table_bodytext">keyword analysis</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2883,13 +2883,13 @@
                                             <td class="text-center">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2897,19 +2897,19 @@
                                                 <p class="service_table_bodytext">content optimisation</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2917,19 +2917,19 @@
                                                 <p class="service_table_bodytext">monthly blog posting</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2937,19 +2937,19 @@
                                                 <p class="service_table_bodytext">blog optimisation</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2957,19 +2957,19 @@
                                                 <p class="service_table_bodytext">setup</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2977,19 +2977,19 @@
                                                 <p class="service_table_bodytext">competitor analysis</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -2997,19 +2997,19 @@
                                                 <p class="service_table_bodytext">technical optimisation</p>
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                             <td class="text-center">
-                                                <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                             </td>
                                         </tr>
                                         <tr class="align-middle">
@@ -3087,19 +3087,19 @@
                                                     <p class="service_table_bodytext">free setup</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3107,10 +3107,10 @@
                                                     <p class="service_table_bodytext">audits</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
                                                 </td>
@@ -3124,19 +3124,19 @@
                                                     <p class="service_table_bodytext">blogs / news site outreach</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3144,19 +3144,19 @@
                                                     <p class="service_table_bodytext">press release creation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3204,19 +3204,19 @@
                                                     <p class="service_table_bodytext">keyword analysis</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3228,13 +3228,13 @@
                                                 <td class="text-center">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3242,19 +3242,19 @@
                                                     <p class="service_table_bodytext">content optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3262,19 +3262,19 @@
                                                     <p class="service_table_bodytext">monthly blog posting</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3282,19 +3282,19 @@
                                                     <p class="service_table_bodytext">blog optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3302,19 +3302,19 @@
                                                     <p class="service_table_bodytext">setup</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3322,19 +3322,19 @@
                                                     <p class="service_table_bodytext">competitor analysis</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3342,19 +3342,19 @@
                                                     <p class="service_table_bodytext">technical optimisation</p>
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                                 <td class="text-center">
-                                                    <img class="img-fluid" src="./assest/images/service_tabletick.svg">
+                                                    <img class="img-fluid" src="{{ asset('frontend/Brandflaire/assest/images/service_tabletick.svg') }}">
                                                 </td>
                                             </tr>
                                             <tr class="align-middle">
@@ -3412,8 +3412,8 @@
     <!-- Service Section 7 Start -->
     <section class="service_s7">
         <div class="service_c7">
-            <img class="service_s7img mobile_none" src="./assest/images/service_s7img.png">
-            <img class="service_s7img desktop_none" src="./assest/images/service_s7imgmob.png">
+            <img class="service_s7img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7img.png') }}">
+            <img class="service_s7img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7imgmob.png') }}">
             <div class="service_s7contentbar">
                 <div class="service_s7formbar">
                     <div class="service_s7titlebar">
@@ -3437,7 +3437,7 @@
                                     <input type="file" name="file" id="file" class="inputfile w-100"
                                         data-multiple-caption="{count} files selected" multiple />
                                     <label class="upload_label w-100" for="file"><span>Upload your brief</span><img
-                                            src="./assest/images/upload_icon.svg"></label>
+                                            src="{{ asset('frontend/Brandflaire/assest/images/upload_icon.svg') }}"></label>
                                 </div>
                             </div>
                         </div>
@@ -3452,7 +3452,7 @@
                                 </div>
                             </div>
                         </div>
-                        <img src="./assest/images/reCAPTCHA.png">
+                        <img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png') }}">
                         <button type="button" class="bnt service_s7btn" data-bs-toggle="modal"
                             data-bs-target="#s7Modal">submit request</button>
                     </form>
