@@ -14,7 +14,7 @@
                 @csrf
                   <h1>sign up</h1>
                   <div class="cont-con">
-                      <input type="text" placeholder="Email Address" name="name" id="name" required> 
+                      <input type="email" placeholder="Email Address" name="email" id="email" required> 
                       <input type="password" placeholder="Password" name="password" id="password" required>
                       <label class="remember-container">
                           <input type="checkbox" id="remember" name="terms" id="terms" />
@@ -34,168 +34,35 @@
         </div>
         <!-- modal code  -->
         <div id="myModal" class="modal">
-          <div class="modal-content">
-            <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+          <form class="modal-content" method="POST" action="{{ route('password.email') }}">
+            @csrf
+            
             <div class="text-modal">
-              <h2>forgot your password?</h2>
+              <h2>{{ __('Reset Password') }}</h2>
               <p>Lorem ipsum dolor sit amet consectetur. Nisl accumsan pellentesque pellentesque eget id. Urna eget lacus.</p>
-              <input type="email" name="email" id="email" placeholder="Email Address">
-              <!-- <label class="remember-container">
-                <input type="checkbox" id="remember"/>
-                <span class="custom-round-checkbox"></span>By ticking this box,you agree to the <a href="#" class="forgotp">Terms & Conditions</a> & <a href="#" class="forgotp">Privacy Policy</a>.
-              </label> -->
-              <label class="checkbox-wrapper">
-                <input type="checkbox" id="termsCheckbox" />
-                <span class="circle-checkbox"></span>
-                <span class="checkbox-label">
-                  By ticking this box, you agree to the
-                  <a href="#" target="_blank">Terms & Conditions</a> & 
-                  <a href="#" target="_blank">Privacy Policy</a>.
-                </span>
-              </label>
-              <img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png')}}" alt="" class="modal-captcha">
+              @if (session('status'))
+                  <div class="alert alert-success" role="alert">
+                      {{ session('status') }}
+                  </div>
+              @endif
+              <input type="email" class="form-control @error('email') is-invalid @enderror" name="email" id="email" placeholder="Email Address" required>
+                  @error('email')
+                  <span class="invalid-feedback" role="alert">
+                      <strong>{{ $message }}</strong>
+                  </span>
+                  @enderror
+              
+              <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+              <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
             </div>
             <div class="modal-btns">
               <a href="#" class="close btn" onclick="closeModal()">Close</a>
-              <a href="#" class="conf btn">Confirm</a>
+              <button type="submit"  class="conf btn">   {{ __('Send Password Reset Link') }}</buttom>
             </div>
-          </div>
+          </form>
         </div>
          <!-- modal code  end-->
     </section>
-
-{{--<section class="register_page">
-    <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_top_right.png') }}" alt=""
-        class="img-fluid mobile_none cutter_top_right">
-    <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_bottom_left.png') }}" alt=""
-        class="img-fluid mobile_none cutter_bottom_left">
-    <div class="contact_main_div">
-        <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_pattern.png') }}" alt=""
-            class="img-fluid desktop_none cutter_pattern">
-        <div class="cutter_main_div_inner">
-            <form class="cutter_main_div_inner_right_login" id="loginform" role="form" action="{{ route('login') }}"
-                method="POST">
-                @csrf
-                <h1 class="register_title">Welcome Back to <span>brand Sparkz!</span></h1>
-
-                <div class="contact_input_div">
-                    <p class="register_input_title">Email</p>
-                    <input type="text" name="email" id="email" class="form-control input_global" required>
-                </div>
-
-                <div class="contact_input_div">
-                    <p class="register_input_title">Password (at least 8 characters)</p>
-                    <input type="password" id="password" name="password" class="form-control input_global" required>
-                </div>
-
-
-                <div class="contact_input_div">
-                    <div class="c-checkbox mb-3">
-                        <div class="c-div">
-                            <label class="d-flex justify-content-center justify-content-lg-start">
-                                <input type="checkbox" id="terms" name="terms">
-                                <label for="terms"></label>
-                            </label>
-                        </div>
-                        <div class="c-text">
-                            <p class="login_strong">Remember me</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="contact_input_div">
-                    <button class="btn btn_global2 mx-auto" type="submit" form="loginform">
-                        <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern2.png') }}" alt=""
-                            class="img-fluid btn_global_pattern2">
-                        <div class="btn_global_inner2">
-                            <p class="cart_text">Login to your account</p>
-                            <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt=""
-                                class="img-fluid cart_logo">
-                        </div>
-                    </button>
-                </div>
-                <div class="w-100">
-                    <button class="btn btn_forgot_pass_link" data-bs-toggle="modal" data-bs-target="#staticBackdrop"
-                       >Forgot Password?</button>
-                </div>
-            </form>
-            <div class="cutter_main_div_inner_left mobile_none">
-                <img src="{{ asset('frontend/BrandSparkz/assets/img/login_cutter_one.png') }}" alt=""
-                    class="img-fluid mobile_none contact_cutter_one">
-                <div class="login_right_bg">
-                    <h1 class="register_left_title">
-                        <span>New here?</span><br> Let's fix that.
-                    </h1>
-
-                    <button class="btn btn_global mx-auto"
-                        onclick="window.location.href='{{ route('user.registration') }}'">
-                        <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt=""
-                            class="img-fluid btn_global_pattern">
-                        <div class="btn_global_inner">
-                            <p class="cart_text">Join Us</p>
-                            <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt=""
-                                class="img-fluid cart_logo">
-                        </div>
-                    </button>
-                </div>
-            </div>
-            <div class="cutter_main_div_inner_bottom_mobo_login desktop_none">
-                <h1 class="register_left_title">
-                    <span>New here?</span><br> Let's fix that.
-                </h1>
-
-                <button class="btn btn_global mx-auto"
-                    onclick="window.location.href='{{ route('user.registration') }}'">
-                    <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}" alt=""
-                        class="img-fluid btn_global_pattern">
-                    <div class="btn_global_inner">
-                        <p class="cart_text">Join Us</p>
-                        <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt=""
-                            class="img-fluid cart_logo">
-                    </div>
-                </button>
-            </div>
-        </div>
-    </div>
-</section>
-
-<div class="modal fade" id="staticBackdrop" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal-width2">
-      <div class="modal-content custom_modal">
-        <h1 class="modal_tt">
-           Forget password
-        </h1>
-
-        @if (session('status'))
-            <div class="alert alert-success" role="alert">
-                {{ session('status') }}
-            </div>
-        @endif
-        <form method="POST" action="{{ route('password.email') }}">
-            @csrf
-        <div class="contact_input_div">
-            <p class="register_input_title">Email</p>
-            <input type="email" id="email" class="form-control input_global @error('email') is-invalid @enderror " name="email" value="{{ old('email') }}" required autocomplete="email" autofocus >
-                @error('email')
-                    <span class="invalid-feedback" role="alert">
-                        <strong>{{ $message }}</strong>
-                    </span>
-                @enderror
-        </div>
-        <div class="buttons_wala">
-            <button class="btn btn_global2 on_phone" type="submit">
-                <img src="./assets/img/btn_primary_pattern2.png" alt="" class="img-fluid btn_global_pattern2">
-                <div class="btn_global_inner2 on_phone">
-                    <p class="cart_text">continue shopping</p>
-                </div>
-            </button>
-        </div>
-        </form>
-       
-      </div>
-    </div>
-  </div>--}}
-
 
 @endsection
 
