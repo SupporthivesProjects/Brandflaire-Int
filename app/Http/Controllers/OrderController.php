@@ -9,6 +9,7 @@ use App\Services\EmailService;
 use Illuminate\Support\Facades\{Auth, Session, DB, Mail, Log};
 use Exception;
 use Barryvdh\DomPDF\Facade\Pdf;
+use Termwind\Components\Dd;
 
 class OrderController extends Controller
 {
@@ -18,11 +19,10 @@ class OrderController extends Controller
             DB::beginTransaction();
 
             $order = $this->createOrder($request);
-
+            
             if ($order) {
                 $this->processOrderItems($order);
                 $this->generateAndSendInvoice($order, $request);
-                
                 $request->session()->put('order_id', $order->id);
                 DB::commit();
                 return true;
@@ -64,12 +64,11 @@ class OrderController extends Controller
 
         foreach (Session::get('cart') as $cartItem) {
             $product = Product::findOrFail($cartItem['id']);
-
-            $this->updateProductStock($product, $cartItem);
+            
+            // $this->updateProductStock($product, $cartItem);
             $this->createOrderDetail($order, $product, $cartItem);
-
-            $subtotal += round($cartItem['price'], 2);
-            $tax += $cartItem['tax'] * $cartItem['quantity'];
+            $subtotal += round($cartItem['price'] ?? 0, 2) * $cartItem['quantity'];
+            $tax += round($cartItem['tax'] ?? 0, 2) * $cartItem['quantity'];
 
             $product->increment('num_of_sale');
         }
@@ -95,9 +94,9 @@ class OrderController extends Controller
             $orderDetail = OrderDetail::create([
                 'order_id' => $order->id,
                 'product_id' => $product->id,
-                'variation' => $cartItem['variant'],
+                'variation' => 'Marketing',
                 'price' => $cartItem['price'],
-                'tax' => $cartItem['tax'] * $cartItem['quantity'],
+                'tax' => $cartItem['tax']?? 0 * $cartItem['quantity'],
                 'shipping_type' => 'home_delivery',
                 'quantity' => $cartItem['quantity'],
                 'translation_file' => $cartItem['translation_file'],
@@ -116,7 +115,6 @@ class OrderController extends Controller
 
             return $orderDetail;
         } catch (Exception $e) {
-            dd($e->getMessage());
             Log::error('Order detail creation error: ' . $e->getMessage());
             flash('Error creating order detail: ' . $e->getMessage())->error();
             return false;

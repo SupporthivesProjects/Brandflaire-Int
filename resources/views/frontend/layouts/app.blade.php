@@ -68,161 +68,169 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-                <a class="navbar-brand" href="{{ route('home') }}">
-                    <img src="{{ asset('frontend/Brandflaire/assest/images/brand.svg') }}" alt=""
-                        class="branlogo img-fluid">
-                </a>
-                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
-                    aria-expanded="false" aria-label="Toggle navigation">
-                    <img src="{{ asset('frontend/Brandflaire/assest/images/Menu-Button.svg') }}" class="img-fluid"
-                        id="changetoggle">
-                </button>
-                <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                    <ul class="navbar-nav m-auto">
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
-                                aria-expanded="false">
-                                Our Solutions
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-servies">
-                                <li><a class="dropdown-item select-item" href="{{ route('seo') }}">SEO</a></li>
-                                <li><a class="dropdown-item" href="{{ route('ppc') }}">PPC</a></li>
-                                <li><a class="dropdown-item" href="{{ route('orm') }}">ORM</a></li>
-                                <li><a class="dropdown-item" href="{{ route('wdd') }}">UI/UX</a></li>
-                                <li><a class="dropdown-item" href="{{ route('social') }}">Social Media</a></li>
-                                <li><a class="dropdown-item" href="{{ route('em') }}">Email Marketing</a></li>
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" aria-current="page"
-                                href="{{ route('aboutus') }}">About</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('faqs') ? 'active' : '' }}"
-                                href="{{ route('faqs') }}">FAQ’s</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link {{ request()->routeIs('contactus') ? 'active' : '' }}"
-                                href="{{ route('contactus') }}">Contact</a>
-                        </li>
-                        <li class="nav-item dropdown">
-                            <a class="nav-link dropdown-toggle" href="#" role="button"
-                                data-bs-toggle="dropdown" aria-expanded="false">
-                                {{ $currency_code }}
-                            </a>
-                            <ul class="dropdown-menu dropdown-menu-cuurency" id="currency_drop">
-                                @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
-                                    <li><a class="dropdown-item {{ $currency_code == $currency->code ? 'select-item' : '' }}"
-                                            href="#"
-                                            data-currency="{{ $currency->code }}">{{ $currency->code }}
-                                            ({{ $currency->symbol }})</a></li>
-                                @endforeach
-                            </ul>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart
-                                <span>({{ Session::has('cart') ? count(Session::get('cart')) : '0' }})</span></a>
-                            <div class="cart-body" id="card-show">
-                                <div class="cartitem-box" id="cart_drop">
-                                    @if (Session::has('cart') && count(Session::get('cart')) > 0)
-                                        <div class="cartbox">
-                                            @php
-                                                $total = 0;
-                                            @endphp
-                                            @foreach (Session::get('cart') as $key => $cartItem)
-                                                @php
-                                                    $product = \App\Models\Product::find($cartItem['id']);
-                                                    $total =
-                                                        $total +
-                                                        round(
-                                                            convert_price($cartItem['price'] * $cartItem['quantity']),
-                                                            2,
-                                                        );
-                                                @endphp
-                                                <div class="cart-item-details">
-                                                    <div class="cart-item-ine">
-                                                        <h5>{{ $product->name }}</h5>
-                                                        <h5>{{ single_price($cartItem['price'] * $cartItem['quantity']) }}
-                                                        </h5>
-                                                        <img src="{{ asset('frontend/Brandflaire/assest/images/delete-icon.svg') }}"
-                                                            class="img-fluid deleteicon"
-                                                            onclick="removeFromCart({{ $key }})">
-                                                    </div>
-                                                    <p>{{ $product->subscription }}</p>
-                                                </div>
-                                            @endforeach
-
-                                            <div class="cart-subtotal">
-                                                <h5>Total:</h4>
-                                                    <h4>{{ currency_symbol() }}{{ number_format($total, 2) }}</h4>
-                                            </div>
-                                            <div class="cart-btn">
-                                                <a href="{{ route('home') }}" class="btn btn-black-border">continue
-                                                    shopping</a>
-                                                <a href="{{ route('checkout.shipping_info') }}"
-                                                    class="btn btn-black">checkout</a>
-                                            </div>
-                                        </div>
-                                    @endif
+              <a class="navbar-brand" href="{{ route('home') }}">
+                <img src="{{ asset('frontend/Brandflaire/assest/images/brand.svg') }}" alt="" class="branlogo img-fluid">
+              </a>
+              <button class="navbar-toggler p-0"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                <img src="{{ asset('frontend/Brandflaire/assest/images/Menu-Button.svg') }}" class="img-fluid" id="changetoggle">
+              </button>
+              <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav m-auto">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                            Our Solutions
+                        </a>
+                        <ul class="dropdown-menu dropdown-menu-servies">
+                            <li><a class="dropdown-item {{ request()->routeIs('seo') ? 'select-item' : '' }}" href="{{ route('seo') }}">SEO</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('ppc') ? 'select-item' : '' }}" href="{{ route('ppc') }}">PPC</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('orm') ? 'select-item' : '' }}" href="{{ route('orm') }}">ORM</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('wdd') ? 'select-item' : '' }}" href="{{ route('wdd') }}">UI/UX</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('social') ? 'select-item' : '' }}" href="{{ route('social') }}">Social Media</a></li>
+                            <li><a class="dropdown-item {{ request()->routeIs('em') ? 'select-item' : '' }}" href="{{ route('em') }}">Email Marketing</a></li>
+                        </ul>
+                    </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" aria-current="page" href="{{ route('aboutus') }}">About</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('faqs') ? 'active' : '' }}" href="{{ route('faqs') }}">FAQ’s</a>
+                  </li>
+                  <li class="nav-item">
+                    <a class="nav-link {{ request()->routeIs('contactus') ? 'active' : '' }}" href="{{ route('contactus') }}">Contact</a>
+                  </li>
+                  <li class="nav-item dropdown" >
+                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                        {{ $currency_code }}
+                    </a>
+                    <ul class="dropdown-menu dropdown-menu-cuurency" id="currency_drop">
+                        @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
+                           <li><a class="dropdown-item {{ $currency_code == $currency->code ? 'select-item' : '' }}" href="#" data-currency="{{ $currency->code }}">{{ $currency->code }} ({{ $currency->symbol }})</a></li>
+                         @endforeach
+                    </ul>
+                </li>
+                  <li class="nav-item">
+                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span id="cart_items_sidenav">({{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }})</span></a>
+                    <div class="cart-body" id="card-show">
+                      <div class="cartitem-box" id="cart_drop">
+                                               
+                            <div class="cartbox">
+                                @if (Session::has('cart') && count(Session::get('cart')) > 0)   
+                                @php
+                                    $total = 0;
+                                @endphp
+                                @foreach (Session::get('cart') as $key => $cartItem)
+                                    @php
+                                        $product = \App\Models\Product::find($cartItem['id']);
+                                        $total = $total + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
+                                    @endphp
+                                <div class="cart-item-details">
+                                    <div class="cart-item-ine">
+                                    <h5>{{ $product->name }}</h5> 
+                                    <h5>{{ single_price($cartItem['price']*$cartItem['quantity']) }}</h5>
+                                    <img src="{{ asset('frontend/Brandflaire/assest/images/delete-icon.svg') }}" class="img-fluid deleteicon" onclick="removeFromCart({{ $key }})">
+                                    </div>
+                                    <p>{{ $product->subscription }}</p>
                                 </div>
+                                @endforeach
+                            
+                                <div class="cart-subtotal">
+                                <h5>Total:</h4>
+                                <h4>{{ currency_symbol() }}{{ number_format($total,2) }}</h4>
+                                </div>
+                                <div class="cart-btn"> 
+                                <a href="{{ route( 'home') }}" class="btn btn-black-border">continue shopping</a>
+                                <a href="{{ route( 'checkout.shipping_info') }}" class="btn btn-black">checkout</a>
+                                </div>
+                                @else
+                                    <div class="empty-cart">
+                                        <p>Your cart is empty</p>
+                                    </div>
+                                @endif
                             </div>
-                        </li>
-                    </ul>
-                    <ul class="navbar-nav navbar-nav-mo">
-                        @auth
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('dashboard') }}">My Account</a>
-                            </li>
-                        @else
-                            <li class="nav-item">
-                                <a class="nav-link" href="{{ route('user.login') }}">Sign In</a>
-                            </li>
-                            <li class="nav-item">
-                                <a class="nav-link btn btn-red" href="{{ route('user.registration') }}">Sign Up</a>
-                            </li>
-                        @endauth
-                    </ul>
-                </div>
+                       
+                      </div>
+                    </div>
+                  </li>
+                </ul>
+                <ul class="navbar-nav navbar-nav-mo">
+                    @auth
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'dashboard') }}">My Account</a>
+                    </li>
+                    @else
+                    <li class="nav-item">
+                        <a class="nav-link" href="{{ route( 'user.login') }}">Sign In</a>
+                    </li>
+                    <li class="nav-item">
+                       <a class="nav-link btn btn-red" href="{{ route( 'user.registration') }}">Sign Up</a>
+                    </li>
+                    @endauth
+                </ul>
+              </div>
             </div>
         </nav>
     </header>
 
-    <!-- Success Modal -->
-    <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
-        aria-labelledby="staticBackdropLabel" aria-hidden="true">
-        <div class="modal-dialog modal-dialog-centered custom-modal-width2">
-            <div class="modal-content custom_modal">
-
-                <h1 class="modal_tt">
-                    Added to Cart
-                </h1>
-
-                <p class="modal_pp">
-                    Your chosen service has successfully been added to the cart.
-                </p>
-                <div class="buttons_wala">
-                    <button class="btn btn_global2 on_phone" onClick="window.location.reload();">
-                        <img src="#" alt="" class="img-fluid btn_global_pattern2">
-                        <div class="btn_global_inner2 on_phone">
-                            <p class="cart_text">continue shopping</p>
-                        </div>
-                    </button>
-
-                    <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal"
-                        data-bs-target="#staticBackdrop2"
-                        onclick="window.location.href='{{ route('checkout.shipping_info') }}'">
-                        <img src="#" alt="" class="img-fluid btn_global_pattern">
-                        <div class="btn_global_inner w-100">
-
-                            <p class="cart_text">Checkout</p>
-                        </div>
-                    </button>
+   <!-- Cart Modal -->
+   <div class="modal" id="customModal">
+    <div class="modal-dialog modal-dialog-centered seomodal_outline">
+        <div class="modal-content seomodal_content">
+            <!-- Modal body -->
+            <div class="modal-body seomodal_body">
+                <div class="s7_modaltitlebar">
+                    <h2 class="s7_modaltitle">Added to cart</h2>
+                    <p class="s7_modalsubtitle">Your chosen service has successfully been added to the cart.</p>
                 </div>
-
+                <div class="cart_modalbtnbar">
+                    <button type="button" class="bnt service_s7btnwhite" onClick="window.location.reload();">Continue Shopping</button>
+                    <button type="button" class="bnt service_s7btn" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">Checkout</button>
+                </div>
             </div>
         </div>
     </div>
+</div>
+
+<div class="modal fade custom-packege-modal contactsuccess" id="succadded" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <div class="modal-body">
+            <img src="#" class="calender-img" alt="">
+            <h4 class="fs-36-24 gilroy-medium fw-normal ls-3 blue-0F2 text-center" id="carttitle">Contact Form Submitted !</h4>
+            <p class="fx-16 gilroy-regular fw-normal" id="cartdescription">
+               Thank you for contacting us! We will get back to you soon.
+            </p>
+           
+                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="{{ asset('frontend/BrandBeKnown/images/button-arrow.svg') }}" alt=""></button>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade custom-packege-modal packagesuccess" id="succadded" tabindex="-1" aria-labelledby="exampleModalLabel"
+      aria-hidden="true">
+      <div class="modal-dialog">
+        <div class="modal-content">
+          <!-- <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button> -->
+          <div class="modal-body">
+            <img src="#" class="calender-img" alt="">
+            <h4 class="fs-36-24 gilroy-medium fw-normal ls-3 blue-0F2 text-center" id="carttitle">Contact Form Submitted !</h4>
+            <p class="fx-16 gilroy-regular fw-normal" id="cartdescription">
+               Thank you for contacting us! We will get back to you soon.
+            </p>
+           
+                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="{{ asset('frontend/BrandBeKnown/images/button-arrow.svg') }}" alt=""></button>
+              
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+
 
 
 
@@ -519,8 +527,32 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
         }
     </script>
 
+    <script>
+        function show_purchase_history_details(order_id) {
+            $('#order-details-modal-body').html(null);
 
+            if (!$('#modal-size').hasClass('modal-lg')) {
+                $('#modal-size').addClass('modal-lg');
+            }
 
+            $.ajax({
+                type: 'POST',
+                url: '{{ route('purchase_history.details') }}',
+                data: {
+                    _token: $('meta[name="csrf-token"]').attr('content'),
+                    order_id: order_id
+                },
+                success: function(data) {
+                    $('#order-details-modal-body').html(data);
+                    $('#order_details').modal("show");
+                    $('.c-preloader').hide();
+                },
+                error: function(xhr) {
+                    console.error('Error loading purchase details:', xhr.responseText);
+                }
+            });
+        }
+    </script>
 
 
 

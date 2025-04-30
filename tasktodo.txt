@@ -1,7 +1,10 @@
 rohit -- checkout.html
-         order confrim.html
          email template
          forget and reset password.html
+
+aksahy --  em.html
+           order confrim.html
+            
 
 pratibha --    social.html   
                 terms.html  
@@ -14,7 +17,6 @@ shivkumar -- seo.html
              reset passwrord.html
 
 swarli -- orm.html
-          em.html
           dashboard.html
           order history.html
           register .html    

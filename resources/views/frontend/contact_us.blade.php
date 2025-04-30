@@ -31,47 +31,61 @@
             </label>
           </div>
 
-          <div class="coupoun_boxx">
-            <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"
-            form="contactform">
-          </div>
-          
-            <button class="nav-link btn botto_black" type="submit" id="submit-btn">Submit your message</a>
-              {{-- <img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png')}}" alt="" class="img-fluid"> --}}
+                    <div class="contact_input_div">
+                        <p class="contact_input_title">Phone</p>
+                        <input type="tel" class="form-control input_global" id="phone" name="phone" required>
+                    </div>
 
+                    <div class="contact_input_div">
+                        <p class="contact_input_title">Your Message</p>
+                        <textarea class="form-control input_global" id="message" name="message" required></textarea>
+                    </div>
 
-          </div>
-          </form>
-          {{-- form ends here --}}
+                    <div class="contact_input_div">
+                        <div class="row">
+                            <div class="col-md-6">
+                                <div class="c-checkbox mb-3">
+                                    <div class="c-div">
+                                        <label class="d-flex justify-content-center justify-content-lg-start">
+                                            <input type="checkbox" id="terms" name="terms">
+                                            <label for="terms"></label>
+                                        </label>
+                                    </div>
+                                    <div class="c-text">
+                                        <p class="login_strong">By ticking this box, you agree to the
+                                            <a href="{{ route('termsandconditions') }}">Terms & Conditions</a> & <a
+                                                href="{{ route('privacypolicy') }}">Privacy Policy</a>
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-6">
+                                <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"
+                                    form="contactform"></div>
+                            </div>
+                        </div>
+                    </div>
 
-        </div>
-        <div class="adress_side">
-          <div class="as_in">
-            <div class="as_upp">
-              <h4>Get in touch with us <br>
-                we are here to assist you</h4>
-                <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mi diam fermentum aliquam porttitor rutrum augue pellentesque amet.</p>
+                    <div class="contact_submit_div">
+                        <button class="btn btn_global mx-auto" type="submit">
+                            <img src="{{ asset('frontend/BrandSparkz/assets/img/btn_primary_pattern.png') }}"
+                                alt="" class="img-fluid btn_global_pattern">
+                            <div class="btn_global_inner">
+                                <p class="cart_text">Submit Message</p>
+                                <img src="{{ asset('frontend/BrandSparkz/assets/img/arrow_logo.svg') }}" alt=""
+                                    class="img-fluid cart_logo">
+                            </div>
+                        </button>
+                    </div>
+                </form>
+                <!-- form ends here -->
             </div>
-            <div class="as_low">
-              <div class="connt">
-                <img src="{{ asset('frontend/Brandflaire/assest/images/phone_call.svg')}}" alt="">
-                <p>+1012 3456 789</p>
-              </div>
-              <div class="connt">
-                <img src="{{ asset('frontend/Brandflaire/assest/images/email.svg')}}" alt="">
-                <p>info@Brandflaire.com</p>
-              </div>
-              <div class="connt">
-                <img src="{{ asset('frontend/Brandflaire/assest/images/local.svg')}}" alt="">
-                <p>132 Dartmouth Street Boston, Massachusetts 02156 United States</p>
-              </div>
-            </div>
-          </div>
         </div>
-      </div>
-    </div>
-  </section>
-
+    </section>
+@endsection   
+@section('scripts')   
+    <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
+    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script>
         function check_agree(form) {
             console.log(form.email.valid);

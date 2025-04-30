@@ -58,7 +58,7 @@ class RegisterController extends Controller
             ]);
 
             $this->handleReferralCode($user);
-
+           
             if (!$this->shouldAutoVerifyEmail()) {
                 $user->sendEmailVerificationNotification();
             }
@@ -97,7 +97,6 @@ class RegisterController extends Controller
             Customer::create([
                 'user_id' => $user->id
             ]);
-
             // Using the EmailService
             $this->emailService->send(
                 'verify',
