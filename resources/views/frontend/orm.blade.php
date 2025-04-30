@@ -1061,8 +1061,8 @@
     <!-- Service Section 7 Start -->
     <section class="service_s7">
         <div class="service_c7">
-            <img class="service_s7img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7img.png') }}">
-            <img class="service_s7img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7imgmob.png') }}">
+            <img class="service_s7img mobile_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7img.png')  }}">
+            <img class="service_s7img desktop_none" src="{{ asset('frontend/Brandflaire/assest/images/service_s7imgmob.png')  }}">
             <div class="service_s7contentbar">
                 <div class="service_s7formbar">
                     <div class="service_s7titlebar">
@@ -1071,49 +1071,46 @@
                             custom package. Simply upload a document of your brief and our team will get back to you.
                         </p>
                     </div>
-                    <form class="service_s7bottom" id="requestform1" action="{{ route('contactus.store') }}" method="post" enctype="multipart/form-data" onsubmit="return check_agree1(this);">
+                    <form class="service_s7bottom"id="requestform1" action="{{ route('contactus.store') }}" method="post"
+                        enctype="multipart/form-data" onsubmit="return check_agree1(this);">
                         @csrf
-                        <input type="hidden" name="from_page" form="requestform1" value="service">
+                        <input type="hidden" name="from_page" value="service">
                         <div class="service_s7textboxbar">
                             <div class="service_s7textboxline">
-                                <input type="text" class="form-control service_s7textbox" id="fullname" name="fullname" form="requestform1" required placeholder="Full Name">
-                                <input type="text" class="form-control service_s7textbox" id="email" name="email" form="requestform1"
-                                    placeholder="Email Address">
+                                <input type="text" class="form-control service_s7textbox" id="fullname" placeholder="Full Name" required>
+                                <input type="email" class="form-control service_s7textbox" id="email" placeholder="Email Address" required>
                             </div>
                             <div class="service_s7textboxline">
                                 <div class="w-100">
-                                    <input type="text" class="form-control service_s7textbox" id="phone" name="phone" form="requestform1" required placeholder="Phone">
+                                    <input type="tel" class="form-control service_s7textbox" id="phone" name="phone" placeholder="Phone" required>
                                 </div>
                                 <div class="w-100">
-                                    {{-- <input type="file" id="document" name="document"  form="requestform1" required class="inputfile w-100"
-                                        data-multiple-caption="{count} files selected" multiple onclick="field_box_file()" />
-                                    <label class="upload_label w-100" for="file"><span>Upload your brief</span><img
-                                            src="{{ asset('frontend/Brandflaire/assest/images/upload_icon.svg') }}"></label> --}}
-
-                                    <input type="file" name="file" id="file" class="inputfile w-100" form="requestform1" required
+                                    <input type="file" name="document" id="document" class="inputfile w-100"
                                         data-multiple-caption="{count} files selected" multiple />
-                                    <label class="upload_label w-100" for="file"><span>Upload your brief</span><img
-                                            src="{{ asset('frontend/Brandflaire/assest/images/upload_icon.svg') }}"></label>
+                                    <label class="upload_label w-100" for="document"><span>Upload your brief</span><img
+                                            src="{{ asset('frontend/Brandflaire/assest/images/upload_icon.svg')  }}"></label>
                                 </div>
-                                
                             </div>
+                        </div>
+                        
+                        <div class="w-100">
+                                <textarea class="form-control service_s7textbox" name="message" id="message" placeholder="Additional Information" required style="height:auto;"></textarea>
                         </div>
                         <div class="supported_checkboxline">
                             <div class="form-check supported_check">
-                                <input class="form-check-input supported_checkbox" type="checkbox"  id="terms" name="terms" form="requestform1">
+                                <input class="form-check-input supported_checkbox" type="checkbox" id="terms">
                                 <div class=" d-flex justify-content-between w-100">
-                                    <label class="supported_checkboxtext" for="terms">By ticking this box, you
+                                    <label class="supported_checkboxtext" for="loginCheck">By ticking this box, you
                                         agree to the <a href="{{ route('termsandconditions') }}" class="supported_checklink">Terms & Conditions</a> & <a
-                                        href="{{ route('privacypolicy') }}" class="supported_checklink">Privacy Policy.</a>
+                                            href="{{ route('privacypolicy') }}" class="supported_checklink">Privacy Policy.</a>
                                     </label>
                                 </div>
                             </div>
                         </div>
-                        {{-- <img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png') }}"> --}}
+                        <!--<img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png')  }}">-->
                         <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
-                                <div class="h-captcha" form="requestform1" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
-                        <button class="bnt service_s7btn" data-bs-toggle="modal" type="submit" form="requestform1"
-                            data-bs-target="#s7Modal">submit request</button>
+                        <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
+                        <button type="submit" class="bnt service_s7btn" >submit request</button>
                     </form>
                 </div>
             </div>
