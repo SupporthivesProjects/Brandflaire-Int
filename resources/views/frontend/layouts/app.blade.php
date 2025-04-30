@@ -190,7 +190,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
     </div>
 </div>
 
-<div class="modal fade custom-packege-modal contactsuccess" id="succadded" tabindex="-1" aria-labelledby="exampleModalLabel"
+<div class="modal fade custom-packege-modal contactsuccess" id="contactModal" tabindex="-1" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -210,7 +210,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
     </div>
 
 
-    <div class="modal fade custom-packege-modal packagesuccess" id="succadded" tabindex="-1" aria-labelledby="exampleModalLabel"
+    <div class="modal fade custom-packege-modal packagesuccess" id="packageModal" tabindex="-1" aria-labelledby="exampleModalLabel"
       aria-hidden="true">
       <div class="modal-dialog">
         <div class="modal-content">
@@ -229,8 +229,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
       </div>
     </div>
 
-
-
+    
 
 
 

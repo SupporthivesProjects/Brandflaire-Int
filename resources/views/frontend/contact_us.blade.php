@@ -31,40 +31,7 @@
             </label>
           </div>
 
-                    <div class="contact_input_div">
-                        <p class="contact_input_title">Phone</p>
-                        <input type="tel" class="form-control input_global" id="phone" name="phone" required>
-                    </div>
-
-                    <div class="contact_input_div">
-                        <p class="contact_input_title">Your Message</p>
-                        <textarea class="form-control input_global" id="message" name="message" required></textarea>
-                    </div>
-
-                    <div class="contact_input_div">
-                        <div class="row">
-                            <div class="col-md-6">
-                                <div class="c-checkbox mb-3">
-                                    <div class="c-div">
-                                        <label class="d-flex justify-content-center justify-content-lg-start">
-                                            <input type="checkbox" id="terms" name="terms">
-                                            <label for="terms"></label>
-                                        </label>
-                                    </div>
-                                    <div class="c-text">
-                                        <p class="login_strong">By ticking this box, you agree to the
-                                            <a href="{{ route('termsandconditions') }}">Terms & Conditions</a> & <a
-                                                href="{{ route('privacypolicy') }}">Privacy Policy</a>
-                                        </p>
-                                    </div>
-                                </div>
-                            </div>
-                            <div class="col-md-6">
-                                <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"
-                                    form="contactform"></div>
-                            </div>
-                        </div>
-                    </div>
+                    
 
                     <div class="contact_submit_div">
                         <button class="btn btn_global mx-auto" type="submit">
