@@ -89,7 +89,6 @@ class CheckoutController extends Controller
                 'checkout_type' => $request->checkout_type,
                 'shipping_type' => 'home_delivery'
             ];
-            
 
             // Add optional fields
             if ($request->addressL2) {
@@ -103,10 +102,9 @@ class CheckoutController extends Controller
             if ($request->dob) {
                 $data['dob'] = $request->dob;
             }
-
+            
             // Store shipping info in session
             $request->session()->put('shipping_info', $data);
-
             // Calculate totals
             $totals = $this->calculateOrderTotals();
             // Process checkout
@@ -122,15 +120,14 @@ class CheckoutController extends Controller
         $subtotal = 0;
         $tax = 0;
         $shipping = 0;
-
+       
         foreach (Session::get('cart') as $cartItem) {
-            $subtotal += $cartItem['price'] * $cartItem['quantity'];
-            $tax += $cartItem['tax'] * $cartItem['quantity'];
-            $shipping += $cartItem['shipping'] * $cartItem['quantity'];
             
-  
+            $subtotal += $cartItem['price'] ?? 0 * $cartItem['quantity'];
+            $tax += $cartItem['tax'] ?? 0 * $cartItem['quantity'];
+            $shipping += $cartItem['shipping'] ?? 0 * $cartItem['quantity'];
         }
-
+       
         $total = $subtotal + $tax + $shipping;
 
         if (Session::has('coupon_discount')) {

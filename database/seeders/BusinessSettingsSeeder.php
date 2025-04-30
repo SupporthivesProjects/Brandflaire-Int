@@ -29,6 +29,8 @@ class BusinessSettingsSeeder extends Seeder
             ['id' => 16, 'type' => 'sslcommerz_payment', 'value' => '0', 'created_at' => '2019-01-24 09:39:07', 'updated_at' => '2019-01-29 06:13:46'],
             ['id' => 17, 'type' => 'vendor_commission', 'value' => '20', 'created_at' => '2019-01-31 06:18:04', 'updated_at' => '2019-04-13 06:49:26'],
             ['id' => 18, 'type' => 'verification_form', 'value' => '[{"type":"text","label":"Your name"},{"type":"text","label":"Shop name"},{"type":"text","label":"Email"},{"type":"text","label":"License No"},{"type":"text","label":"Full Address"},{"type":"text","label":"Phone Number"},{"type":"file","label":"Tax Papers"}]', 'created_at' => '2019-02-03 11:36:58', 'updated_at' => '2019-02-16 06:14:42'],
+            ['id' => 19, 'type' => 'coupon_system', 'value' => '1', 'created_at' => now(), 'updated_at' => now()],
+            ['id' => 20, 'type' => 'citigate_sandbox', 'value' => '1', 'created_at' => now(), 'updated_at' => now()],
         ];
 
         foreach ($settings as $setting) {

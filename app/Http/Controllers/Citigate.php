@@ -25,16 +25,13 @@ class Citigate
     public function __construct()
     {
         if (Session::has('payment_type')) {
-            
             if (Session::get('payment_type') == 'cart_payment') {
-                
                 # IF SANDBOX TRUE, THEN IT WILL CONNECT WITH CITIGATE SANDBOX (TEST) SYSTEM
                 if (BusinessSetting::where('type', 'citigate_sandbox')->first()->value == 1) {
                     define("CITIGATE_IS_SANDBOX", true);
                 } else {
                     define("CITIGATE_IS_SANDBOX", false);
                 }
-
                 //$this->setCitigateMode((CITIGATE_IS_SANDBOX) ? 1 : 0);
                 $this->citigate_merchantName = env('CITIGATE_MerchantName');
                 $this->citigate_merchantPassword = env('CITIGATE_MerchantPassword');

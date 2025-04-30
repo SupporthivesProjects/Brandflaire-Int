@@ -21,14 +21,12 @@ class CitigateController extends Controller
             $order = Order::findOrFail($request->session()->get('order_id'));
             $postData = $this->preparePaymentData($order, $request);
             $this->storeBillingAddress($request);
-
             // Store session data
             $paymentSession = PaymentSession::create([
                 'token' => $postData['MerchantRef'],
                 'session_data' => Session::all(),
                 'order_id' => $order->id
             ]);
-
             $citigate = new Citigate();
             return $citigate->initiate($postData, false);
         } catch (Exception $e) {
@@ -102,9 +100,7 @@ class CitigateController extends Controller
 
     private function calculateOrderTotal($order)
     {
-        return $order->orderDetails->sum(function ($detail) {
-            return round(convert_price($detail->price), 2);
-        });
+        return $order->grand_total;
     }
 
     private function generateSignature($merchantRef, $amount)

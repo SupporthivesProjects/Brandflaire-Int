@@ -109,7 +109,7 @@
                     </ul>
                 </li>
                   <li class="nav-item">
-                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span id="cart_items_sidenav2">({{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }})</span></a>
+                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span id="cart_items_sidenav">({{ Session::has('cart') ? (count($cart = Session::get('cart')) > 0 ? count($cart) : 0) : 0 }})</span></a>
                     <div class="cart-body" id="card-show">
                       <div class="cartitem-box" id="cart_drop">
                                                

@@ -59,7 +59,7 @@ class ContactUSController extends Controller
             //     Flash::error('Please complete the captcha verification');
             //     return back()->withInput();
             // }
-            $this->verifyCaptcha($request);
+            // $this->verifyCaptcha($request);
 
             try {
                 $ip = $this->validateIpSubmissions($request);

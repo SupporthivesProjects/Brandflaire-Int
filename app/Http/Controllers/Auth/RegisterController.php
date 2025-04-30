@@ -37,7 +37,7 @@ class RegisterController extends Controller
             'name' => ['required', 'string', 'max:255'],
             'email' => ['required', 'string', 'email', 'max:255', 'unique:users'],
             'password' => ['required', 'string', 'min:8', 'confirmed'],
-            //'h-captcha-response' => ['required']
+            // 'h-captcha-response' => ['required']
         ]);
     }
 
@@ -58,7 +58,7 @@ class RegisterController extends Controller
             ]);
 
             $this->handleReferralCode($user);
-
+           
             if (!$this->shouldAutoVerifyEmail()) {
                 $user->sendEmailVerificationNotification();
             }
@@ -97,7 +97,6 @@ class RegisterController extends Controller
             Customer::create([
                 'user_id' => $user->id
             ]);
-
             // Using the EmailService
             $this->emailService->send(
                 'verify',
