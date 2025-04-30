@@ -1,16 +1,18 @@
 @extends('frontend.layouts.app')
 
 @section('content')
-<section class="error">
-    <div class="error_div1">
-        <div class="inner_error">
-            <div class="text_error">
-                <h3 class="heading_error">oops, we lost you somewhere!</h3>
-                <p class="para_error">Let us help you find your way back.</p>
+<section class="error-section">
+    <img src=" {{ asset('frontend/Brandflaire/assest/images/errro-bg-img.png')}}" alt="" class="img-fluid bg-image d-none d-lg-block d-md-block">
+    <img src=" {{ asset('frontend/Brandflaire/assest/images/errro-bg-img-mo.png')}}" alt="" class="img-fluid bg-image d-block d-lg-none d-md-none">
+    <div class="container">
+        <div class="col">
+            <div class="error-content">
+                <h1>404</h1>
+                <h5>something went wrong...</h5>
+                <p>Try reload this page or go back to homepage.</p>
+                <a href="{{ route('home') }}" class="btn btn-red">Go Back Home</a>
             </div>
-            <button class="btn btn_error" onclick="window.location.href='{{ route('home') }}'">Take Me Home</button>
         </div>
-
     </div>
 </section>
 @endsection

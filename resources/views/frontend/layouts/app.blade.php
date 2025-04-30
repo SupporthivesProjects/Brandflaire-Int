@@ -1,5 +1,5 @@
 <?php
-    error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
+error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 ?>
 <!DOCTYPE html>
 <html lang="en">
@@ -63,143 +63,169 @@
         }
         Session::put('currency_code', $currency_code);
     @endphp
-    
+
 
     <header class="fixed-top">
         <nav class="navbar navbar-expand-lg">
             <div class="container">
-              <a class="navbar-brand" href="{{ route('home') }}">
-                <img src="{{ asset('frontend/Brandflaire/assest/images/brand.svg') }}" alt="" class="branlogo img-fluid">
-              </a>
-              <button class="navbar-toggler p-0"  type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
-                <img src="{{ asset('frontend/Brandflaire/assest/images/Menu-Button.svg') }}" class="img-fluid" id="changetoggle">
-              </button>
-              <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav m-auto">
-                    <li class="nav-item dropdown">
-                        <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                            Our Solutions
-                        </a>
-                        <ul class="dropdown-menu dropdown-menu-servies">
-                            <li><a class="dropdown-item select-item" href="{{ route('seo') }}">SEO</a></li>
-                            <li><a class="dropdown-item" href="{{ route('ppc') }}">PPC</a></li>
-                            <li><a class="dropdown-item" href="{{ route('orm') }}">ORM</a></li>
-                            <li><a class="dropdown-item" href="{{ route('wdd') }}">UI/UX</a></li>
-                            <li><a class="dropdown-item" href="{{ route('social') }}">Social Media</a></li>
-                            <li><a class="dropdown-item" href="{{ route('em') }}">Email Marketing</a></li>
-                        </ul>
-                    </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" aria-current="page" href="{{ route('aboutus') }}">About</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('faqs') ? 'active' : '' }}" href="{{ route('faqs') }}">FAQ’s</a>
-                  </li>
-                  <li class="nav-item">
-                    <a class="nav-link {{ request()->routeIs('contactus') ? 'active' : '' }}" href="{{ route('contactus') }}">Contact</a>
-                  </li>
-                  <li class="nav-item dropdown" >
-                    <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
-                        {{ $currency_code }}
-                    </a>
-                    <ul class="dropdown-menu dropdown-menu-cuurency" id="currency_drop">
-                        @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
-                           <li><a class="dropdown-item {{ $currency_code == $currency->code ? 'select-item' : '' }}" href="#" data-currency="{{ $currency->code }}">{{ $currency->code }} ({{ $currency->symbol }})</a></li>
-                         @endforeach
-                    </ul>
-                </li>
-                  <li class="nav-item">
-                    <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart <span>({{ Session::has('cart') ? count(Session::get('cart')) : '0' }})</span></a>
-                    <div class="cart-body" id="card-show">
-                      <div class="cartitem-box" id="cart_drop">
-                        @if (Session::has('cart') && count(Session::get('cart')) > 0)                          
-                            <div class="cartbox">
-                                @php
-                                    $total = 0;
-                                @endphp
-                                @foreach (Session::get('cart') as $key => $cartItem)
-                                    @php
-                                        $product = \App\Models\Product::find($cartItem['id']);
-                                        $total = $total + round(convert_price($cartItem['price']*$cartItem['quantity']), 2);
-                                    @endphp
-                                <div class="cart-item-details">
-                                    <div class="cart-item-ine">
-                                    <h5>{{ $product->name }}</h5> 
-                                    <h5>{{ single_price($cartItem['price']*$cartItem['quantity']) }}</h5>
-                                    <img src="{{ asset('frontend/Brandflaire/assest/images/delete-icon.svg') }}" class="img-fluid deleteicon" onclick="removeFromCart({{ $key }})">
-                                    </div>
-                                    <p>{{ $product->subscription }}</p>
-                                </div>
+                <a class="navbar-brand" href="{{ route('home') }}">
+                    <img src="{{ asset('frontend/Brandflaire/assest/images/brand.svg') }}" alt=""
+                        class="branlogo img-fluid">
+                </a>
+                <button class="navbar-toggler p-0" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <img src="{{ asset('frontend/Brandflaire/assest/images/Menu-Button.svg') }}" class="img-fluid"
+                        id="changetoggle">
+                </button>
+                <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="navbar-nav m-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button" data-bs-toggle="dropdown"
+                                aria-expanded="false">
+                                Our Solutions
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-servies">
+                                <li><a class="dropdown-item select-item" href="{{ route('seo') }}">SEO</a></li>
+                                <li><a class="dropdown-item" href="{{ route('ppc') }}">PPC</a></li>
+                                <li><a class="dropdown-item" href="{{ route('orm') }}">ORM</a></li>
+                                <li><a class="dropdown-item" href="{{ route('wdd') }}">UI/UX</a></li>
+                                <li><a class="dropdown-item" href="{{ route('social') }}">Social Media</a></li>
+                                <li><a class="dropdown-item" href="{{ route('em') }}">Email Marketing</a></li>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('aboutus') ? 'active' : '' }}" aria-current="page"
+                                href="{{ route('aboutus') }}">About</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('faqs') ? 'active' : '' }}"
+                                href="{{ route('faqs') }}">FAQ’s</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link {{ request()->routeIs('contactus') ? 'active' : '' }}"
+                                href="{{ route('contactus') }}">Contact</a>
+                        </li>
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle" href="#" role="button"
+                                data-bs-toggle="dropdown" aria-expanded="false">
+                                {{ $currency_code }}
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-cuurency" id="currency_drop">
+                                @foreach (\App\Models\Currency::getActiveCurrencies() as $key => $currency)
+                                    <li><a class="dropdown-item {{ $currency_code == $currency->code ? 'select-item' : '' }}"
+                                            href="#"
+                                            data-currency="{{ $currency->code }}">{{ $currency->code }}
+                                            ({{ $currency->symbol }})</a></li>
                                 @endforeach
-                            
-                                <div class="cart-subtotal">
-                                <h5>Total:</h4>
-                                <h4>{{ currency_symbol() }}{{ number_format($total,2) }}</h4>
-                                </div>
-                                <div class="cart-btn"> 
-                                <a href="{{ route( 'home') }}" class="btn btn-black-border">continue shopping</a>
-                                <a href="{{ route( 'checkout.shipping_info') }}" class="btn btn-black">checkout</a>
+                            </ul>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link cart-toggle" href="javascript:void(0);">My Cart
+                                <span>({{ Session::has('cart') ? count(Session::get('cart')) : '0' }})</span></a>
+                            <div class="cart-body" id="card-show">
+                                <div class="cartitem-box" id="cart_drop">
+                                    @if (Session::has('cart') && count(Session::get('cart')) > 0)
+                                        <div class="cartbox">
+                                            @php
+                                                $total = 0;
+                                            @endphp
+                                            @foreach (Session::get('cart') as $key => $cartItem)
+                                                @php
+                                                    $product = \App\Models\Product::find($cartItem['id']);
+                                                    $total =
+                                                        $total +
+                                                        round(
+                                                            convert_price($cartItem['price'] * $cartItem['quantity']),
+                                                            2,
+                                                        );
+                                                @endphp
+                                                <div class="cart-item-details">
+                                                    <div class="cart-item-ine">
+                                                        <h5>{{ $product->name }}</h5>
+                                                        <h5>{{ single_price($cartItem['price'] * $cartItem['quantity']) }}
+                                                        </h5>
+                                                        <img src="{{ asset('frontend/Brandflaire/assest/images/delete-icon.svg') }}"
+                                                            class="img-fluid deleteicon"
+                                                            onclick="removeFromCart({{ $key }})">
+                                                    </div>
+                                                    <p>{{ $product->subscription }}</p>
+                                                </div>
+                                            @endforeach
+
+                                            <div class="cart-subtotal">
+                                                <h5>Total:</h4>
+                                                    <h4>{{ currency_symbol() }}{{ number_format($total, 2) }}</h4>
+                                            </div>
+                                            <div class="cart-btn">
+                                                <a href="{{ route('home') }}" class="btn btn-black-border">continue
+                                                    shopping</a>
+                                                <a href="{{ route('checkout.shipping_info') }}"
+                                                    class="btn btn-black">checkout</a>
+                                            </div>
+                                        </div>
+                                    @endif
                                 </div>
                             </div>
-                        @endif
-                      </div>
-                    </div>
-                  </li>
-                </ul>
-                <ul class="navbar-nav navbar-nav-mo">
-                    @auth
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'dashboard') }}">My Account</a>
-                    </li>
-                    @else
-                    <li class="nav-item">
-                        <a class="nav-link" href="{{ route( 'user.login') }}">Sign In</a>
-                    </li>
-                    <li class="nav-item">
-                       <a class="nav-link btn btn-red" href="{{ route( 'user.registration') }}">Sign Up</a>
-                    </li>
-                    @endauth
-                </ul>
-              </div>
+                        </li>
+                    </ul>
+                    <ul class="navbar-nav navbar-nav-mo">
+                        @auth
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('dashboard') }}">My Account</a>
+                            </li>
+                        @else
+                            <li class="nav-item">
+                                <a class="nav-link" href="{{ route('user.login') }}">Sign In</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link btn btn-red" href="{{ route('user.registration') }}">Sign Up</a>
+                            </li>
+                        @endauth
+                    </ul>
+                </div>
             </div>
-          </nav>
+        </nav>
     </header>
 
-   <!-- Success Modal -->
-  <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
-    <div class="modal-dialog modal-dialog-centered custom-modal-width2">
-      <div class="modal-content custom_modal">
+    <!-- Success Modal -->
+    <div class="modal fade" id="customModal" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+        aria-labelledby="staticBackdropLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered custom-modal-width2">
+            <div class="modal-content custom_modal">
 
-        <h1 class="modal_tt">
-            Added to Cart
-        </h1>
+                <h1 class="modal_tt">
+                    Added to Cart
+                </h1>
 
-        <p class="modal_pp">
-            Your chosen service has successfully been added to the cart.
-        </p>
-        <div class="buttons_wala">
-            <button class="btn btn_global2 on_phone"  onClick="window.location.reload();">
-                <img src="#" alt="" class="img-fluid btn_global_pattern2">
-                <div class="btn_global_inner2 on_phone">
-                    <p class="cart_text">continue shopping</p>
+                <p class="modal_pp">
+                    Your chosen service has successfully been added to the cart.
+                </p>
+                <div class="buttons_wala">
+                    <button class="btn btn_global2 on_phone" onClick="window.location.reload();">
+                        <img src="#" alt="" class="img-fluid btn_global_pattern2">
+                        <div class="btn_global_inner2 on_phone">
+                            <p class="cart_text">continue shopping</p>
+                        </div>
+                    </button>
+
+                    <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal"
+                        data-bs-target="#staticBackdrop2"
+                        onclick="window.location.href='{{ route('checkout.shipping_info') }}'">
+                        <img src="#" alt="" class="img-fluid btn_global_pattern">
+                        <div class="btn_global_inner w-100">
+
+                            <p class="cart_text">Checkout</p>
+                        </div>
+                    </button>
                 </div>
-            </button>
-            
-        <button class="btn btn_global width_for_checkoutbtn" data-bs-toggle="modal" data-bs-target="#staticBackdrop2" onclick="window.location.href='{{ route( 'checkout.shipping_info') }}'">
-            <img src="#" alt="" class="img-fluid btn_global_pattern">
-            <div class="btn_global_inner w-100">
-                
-                <p class="cart_text">Checkout</p>
-            </div>
-    </button>
-        </div>
-       
-      </div>
-    </div>
-  </div>
 
-  
-  
+            </div>
+        </div>
+    </div>
+
+
+
 
     <main>
         @yield('content')
@@ -207,7 +233,9 @@
     @include('frontend.inc.footer')
     <!-- Essential JavaScript -->
 
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    {{-- <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js"
+        integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer"></script> --}}
 
 
     <script src="{{ asset('frontend/Brandflaire/assest/js/jquery-3.7.1.min.js') }}"></script>
@@ -217,9 +245,6 @@
     <script src="{{ asset('frontend/Brandflaire/assest/js/swiper-bundle.min.js') }}"></script>
     <script src="{{ asset('frontend/Brandflaire/assest/js/aos.js') }}"></script>
     <script src="{{ asset('frontend/Brandflaire/assest/js/main.js') }}"></script>
-
-   
-    
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
@@ -437,18 +462,16 @@
                         // Update cart count in navbar
                         updateNavCart();
 
-                        // Show success message
-                        // Swal.fire({
-                        //     position: 'top-end',
-
-                        //     icon: 'success',
-                        //     title: 'Item added to cart!',
-                        //     showConfirmButton: false,
-                        //     timer: 1500
-                            
-                        // });
+                        // Show custom modal
                         $('#customModal').modal('show');
                         
+                        // Remove backdrop and fix body styling
+                        setTimeout(function() {
+                            $('.modal-backdrop').remove();
+                            $('body').removeClass('modal-open');
+                            $('body').css('padding-right', '');
+                        }, 10);
+
                     } else {
                         // Show error message
                         Swal.fire({
@@ -486,12 +509,19 @@
             });
         }
 
-
+        // Add this function to handle modal closing
+        function closeCustomModal() {
+            $('#customModal').modal('hide');
+            // Refresh the page after a short delay
+            setTimeout(function() {
+                window.location.reload();
+            }, 100);
+        }
     </script>
 
-   
-    
-   
+
+
+
 
 
     @yield('scripts')
