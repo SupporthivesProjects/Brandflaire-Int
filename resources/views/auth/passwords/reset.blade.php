@@ -27,7 +27,7 @@
                             </span>
                         @enderror
                       
-                        <input type="text" class="form-control input_global" id="password-confirm" type="password"  name="password_confirmation" required autocomplete="new-password">
+                        <input type="password" class="form-control input_global" id="password-confirm" type="password"  name="password_confirmation" required autocomplete="new-password">
                   </div>
                   <button type="submit" class="btn btn-black">Reset password</button>
                 </form>
