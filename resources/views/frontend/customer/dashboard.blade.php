@@ -187,22 +187,6 @@
                                         </tr>
                                     </thead>
                                     <tbody class="history_table_body">
-                                        <tr class="align-middle">
-                                            <td>
-                                                <p class="hisroty_orderid">#123</p>
-                                            </td>
-                                            <td>
-                                                <p class="history_bodytext">June 14, 2021</p>
-                                            </td>
-                                            <td>
-                                                <p class="history_bodytext">X1</p>
-                                            </td>
-                                            <td>
-                                                <p class="history_bodytext">£800</p>
-                                            </td>
-                                            <td><button class="order_detailbtn" data-bs-toggle="modal" data-bs-target="#myModal">View Details</button>
-                                            </td>
-                                        </tr>
                                         @forelse ($orders as $key => $order)
                                             <tr class="align-middle">
                                                 <td>
@@ -234,7 +218,7 @@
         </div>
     </section>
     <!-- Dashboard Section 2 End -->
-    
+
 @endsection
 @section('script')
 @endsection
