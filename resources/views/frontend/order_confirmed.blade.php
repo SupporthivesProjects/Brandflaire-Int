@@ -22,79 +22,49 @@
 
     
 
-
-    <section class="pay_S">
-        <div class="PayS_div1">
-            <img src="{{ asset('frontend/BrandSparkz/assets/img/intersect.png') }}" alt="" class="intersect">
-            <div class="container">
-                <div class="terms_div1">
-                    <h3 class="terms_heading">Payment Successful</h3>
-                    <p class="para_terms">Lorem ipsum dolor sit amet consectetur. Purus eget arcu non suscipit id.</p>
+    <section class="sucess_secure">
+    <div class="container px-0">
+      <div class="upper_box">
+        <h5 class="succes_full">Payment was successful</h5>
+<p>Your payment was successful! Thank you for your purchase.</p>
+      </div>
+      <div class="lower_box">
+          <div class="orfer_text">
+            <h4>Order Summary</h4>
+          </div>
+          <div class="box_db">
+            @php
+                $total=0;
+            @endphp
+            @foreach ($order->orderDetails as $key => $orderDetail)
+            @php
+                $product = \App\Models\Product::find($orderDetail->product->id);
+                $total = $total + round(convert_price($orderDetail->price),2);                           
+            @endphp
+            <div class="cart_inner">
+              <div class="cart_inner_top">
+                <div class="cart_inner_left">
+                  <p class="cart_prod_title"><b>{{ $product->name }}</b></p>
                 </div>
-            </div>
-        </div>
-        <div class="term2_main Ps_main">
-            <div class="div_for_pS">
-                <div class="div_for_ps_inner">
-                    <h3 class="heading_of_pS">Order Summary</h3>
+                <div class="cart_inner_right">
+                  <p class="cart_prod_price">{{ single_price($orderDetail->price) }}</p>
+                  <img src="{{ asset('frontend/Brandflaire/assest/images/del.svg') }}" alt="" class="img-fluid">
                 </div>
-                <table class="table table-borderless ">
-                    <thead>
-                        <tr class="table_ps">
-                            <th scope="col">
-                                <p class="head_ps">Product</p>
-                            </th>
-                            <th scope="col">
-                                <p class="head_ps">No.&nbsp;Months</p>
-                            </th>
-                            <th scope="col">
-                                <p class="head_ps for_center">Qty</p>
-                            </th>
-                            <th scope="col">
-                                <p class="head_ps for_total1">Subtotal</p>
-                            </th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        @php
-                            $total=0;
-                        @endphp
-                        @foreach ($order->orderDetails as $key => $orderDetail)
-                        @php
-                           $product = \App\Models\Product::find($orderDetail->product->id);
-                           $total = $total + round(convert_price($orderDetail->price),2);                           
-                        @endphp
-                        <tr class="table_ps">
-                            <td scope="row">
-                                <p class="data_ps"><span>{{ $product->name }}</span></p>
-                            </td>
-                            <td>
-                                <p class="data_ps">1 Month</p>
-                            </td>
-                            <td>
-                                <p class="data_ps for_center">{{ $orderDetail->quantity }}</p>
-                            </td>
-                            <td>
-                                <p class=" for_total">{{ single_price($orderDetail->price) }}</p>
-                            </td>
-                        </tr>
-                        @endforeach
-                        <tr>
-                            <td scope="row"></td>
-                            <td></td>
-                            <td>
-                                <p class="head_ps for_subtotal for_center">Total</p>
-                            </td>
-                            <td>
-                                <p class="for_total for_bottom">{{ currency_symbol() }}{{ number_format($total,2) }}</p>
-                            </td>
-                        </tr>
-                    </tbody>
-                </table>
-                <button class="btn btn_ps" onclick="window.location.href='{{ route('home') }}'">Return home</button>
+              </div>
+              <div class="cart_inner_bottom">
+                <p class="cart_duration">1 Month</p>
+              </div>
             </div>
-        </div>
-    </section>
+            <div class="cart_stroke"></div>
+            @endforeach
+          </div>
+          <div class="cart_total">
+            <h3 class="total_label">Total:</h3>
+            <h3 class="total_price">{{ currency_symbol() }}{{ number_format($total,2) }}</h3>
+          </div>
+          <a class="nav-link btn botto_black" href="{{ route('home') }}">Return Home</a>
+      </div>
+  </section>
 
 @endsection
 @section('script')
