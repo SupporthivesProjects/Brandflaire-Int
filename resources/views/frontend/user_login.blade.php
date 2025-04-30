@@ -70,7 +70,7 @@
             </div>
             <div class="modal-btns">
               <a href="#" class="close btn" onclick="closeModal()">Close</a>
-              <button type="submit"  class="conf btn">   {{ __('Send Password Reset Link') }}</buttom>
+              <button type="submit"  class="conf btn">{{ __('Send Password Reset Link') }}</buttom>
             </div>
           </form>
         </div>
