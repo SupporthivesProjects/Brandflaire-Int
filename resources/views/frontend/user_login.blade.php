@@ -1,8 +1,70 @@
 @extends('frontend.layouts.app')
 
 @section('content')
+{{--New Code Starts here?--}}
+<section class="login-section">
+        <img src="{{ asset('frontend/Brandflaire/assest/images/login-dc.png')}}" alt="" class="img-fluid bg-image d-none d-lg-block d-md-block">
+        <img src="{{ asset('frontend/Brandflaire/assest/images/login-mob.png')}}" alt="" class="img-fluid bg-image d-block d-lg-none d-md-none mobile-img" style="position: relative;">
+        <div class="container">
+          <div class="row connn">
+            <div class="col lcon">
+              <div class="login-content">
+                <form class="cutter_main_div_inner_right_login" id="loginform" role="form" action="{{ route('login') }}"
+                method="POST">
+                @csrf
+                  <h1>sign up</h1>
+                  <div class="cont-con">
+                      <input type="text" placeholder="Email Address" name="name" id="name" required> 
+                      <input type="password" placeholder="Password" name="password" id="password" required>
+                      <label class="remember-container">
+                          <input type="checkbox" id="remember" name="terms" id="terms" />
+                          <span class="custom-round-checkbox" for="terms"></span>
+                          Remember Me
+                        </label>
+                  </div>
+                  <button class="btn btn-black" type="submit" form="loginform">Continue</button>
+                  <a href="#" class="forgotp" onclick="openModal()">Forgot Password?</a>
+                  <p class="red-line"></p>
+                  <p class="desc">Don't have an account?</p>
+                  <a href="{{ route('user.registration')}}" class="forgotp">Sign Up Here</a>
+                </form>
+              </div>
+          </div>
+          </div>   
+        </div>
+        <!-- modal code  -->
+        <div id="myModal" class="modal">
+          <div class="modal-content">
+            <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+            <div class="text-modal">
+              <h2>forgot your password?</h2>
+              <p>Lorem ipsum dolor sit amet consectetur. Nisl accumsan pellentesque pellentesque eget id. Urna eget lacus.</p>
+              <input type="email" name="email" id="email" placeholder="Email Address">
+              <!-- <label class="remember-container">
+                <input type="checkbox" id="remember"/>
+                <span class="custom-round-checkbox"></span>By ticking this box,you agree to the <a href="#" class="forgotp">Terms & Conditions</a> & <a href="#" class="forgotp">Privacy Policy</a>.
+              </label> -->
+              <label class="checkbox-wrapper">
+                <input type="checkbox" id="termsCheckbox" />
+                <span class="circle-checkbox"></span>
+                <span class="checkbox-label">
+                  By ticking this box, you agree to the
+                  <a href="#" target="_blank">Terms & Conditions</a> & 
+                  <a href="#" target="_blank">Privacy Policy</a>.
+                </span>
+              </label>
+              <img src="{{ asset('frontend/Brandflaire/assest/images/reCAPTCHA.png')}}" alt="" class="modal-captcha">
+            </div>
+            <div class="modal-btns">
+              <a href="#" class="close btn" onclick="closeModal()">Close</a>
+              <a href="#" class="conf btn">Confirm</a>
+            </div>
+          </div>
+        </div>
+         <!-- modal code  end-->
+    </section>
 
-<section class="register_page">
+{{--<section class="register_page">
     <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_top_right.png') }}" alt=""
         class="img-fluid mobile_none cutter_top_right">
     <img src="{{ asset('frontend/BrandSparkz/assets/img/cutter_bottom_left.png') }}" alt=""
@@ -132,12 +194,29 @@
        
       </div>
     </div>
-  </div>
+  </div>--}}
 
 
 @endsection
 
 @section('scripts')
+<script>
+    function openModal() {
+      document.getElementById("myModal").style.display = "block";
+    }
+  
+    function closeModal() {
+      document.getElementById("myModal").style.display = "none";
+    }
+  
+    // Optional: Close modal when clicking outside of it
+    window.onclick = function(event) {
+      const modal = document.getElementById("myModal");
+      if (event.target == modal) {
+        modal.style.display = "none";
+      }
+    }
+  </script>
 
 <script>
     function check_agree(form) {
