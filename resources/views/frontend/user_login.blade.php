@@ -36,7 +36,7 @@
         <div id="myModal" class="modal">
           <form class="modal-content" method="POST" action="{{ route('password.email') }}">
             @csrf
-            <!-- <span class="close" onclick="closeModal()">&times;</span> -->
+            
             <div class="text-modal">
               <h2>{{ __('Reset Password') }}</h2>
               <p>Lorem ipsum dolor sit amet consectetur. Nisl accumsan pellentesque pellentesque eget id. Urna eget lacus.</p>
@@ -51,26 +51,13 @@
                       <strong>{{ $message }}</strong>
                   </span>
                   @enderror
-              <!-- <label class="remember-container">
-                <input type="checkbox" id="remember"/>
-                <span class="custom-round-checkbox"></span>By ticking this box,you agree to the <a href="#" class="forgotp">Terms & Conditions</a> & <a href="#" class="forgotp">Privacy Policy</a>.
-              </label> -->
-              {{-- <label class="checkbox-wrapper">
-                <input type="checkbox" id="termsCheckbox" />
-                <span class="circle-checkbox"></span>
-                <span class="checkbox-label">
-                  By ticking this box, you agree to the
-                  <a href="#" target="_blank">Terms & Conditions</a> & 
-                  <a href="#" target="_blank">Privacy Policy</a>.
-                </span>
-              </label> --}}
-              <!--<img src="./assest/images/reCAPTCHA.png" alt="" class="modal-captcha">-->
+              
               <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
               <div class="h-captcha" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}"></div>
             </div>
             <div class="modal-btns">
               <a href="#" class="close btn" onclick="closeModal()">Close</a>
-              <button type="submit"  class="conf btn">{{ __('Send Password Reset Link') }}</buttom>
+              <button type="submit"  class="conf btn">   {{ __('Send Password Reset Link') }}</buttom>
             </div>
           </form>
         </div>

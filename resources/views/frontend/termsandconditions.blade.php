@@ -2,7 +2,6 @@
 
 @section('content')
     {{-- NEW CODE START HERE!!  --}}
-
     <section class="termsection legalsection">
         <img src="{{ asset('frontend/Brandflaire/assest/images/tc-Voortman.png')}}" alt="" class="img-fluid bg-image d-md-block d-lg-block d-none">
         <img src="{{ asset('frontend/Brandflaire/assest/images/tc-Voortman-mo.png')}}" alt="" class="img-fluid bg-image d-md-none d-lg-none d-block">
@@ -11,7 +10,7 @@
                 <div class="row">
                     <div class="legalcontent">
                         <h2>Terms and conditions</h2>
-                        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Convallis fermentum.</p>
+                        <p>Lorem ipsum dolor sit amet, consecteture adipiscing elit. Convallis fermentum.</p>
                     </div>
                 </div>
             </div>
@@ -104,11 +103,11 @@
                             Tellus et rhoncus, quis leo id ornare nulla tortor nunc.
                         </p>
                         <div class="text-center">
-                            <a href="#" class="btn btn-black"> Read More</a>
+                            <a href="{{ route('aboutus')}}" class="btn btn-black"> Read More</a>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
     </section>
-@endsection
+    @endsection
