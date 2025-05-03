@@ -172,7 +172,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
     </header>
 
    <!-- Cart Modal -->
-   <div class="modal" id="customModal">
+<div class="modal" id="customModal">
     <div class="modal-dialog modal-dialog-centered seomodal_outline">
         <div class="modal-content seomodal_content">
             <!-- Modal body -->
