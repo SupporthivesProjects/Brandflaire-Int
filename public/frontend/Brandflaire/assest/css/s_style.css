@@ -757,3 +757,14 @@ text-transform: capitalize;
          height:41vw; 
    }
 }
+
+
+
+@media only screen and (min-device-width:2000px) and (max-device-width:10000px) {
+   .login-section{
+         height:100vh; 
+   }
+   .Faq-page {
+       height:100vh;
+   }
+}

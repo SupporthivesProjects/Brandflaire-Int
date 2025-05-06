@@ -47,7 +47,31 @@
  
      </div>
      </section>
- 
+ <script>
+  document.querySelectorAll('.faq-question').forEach(item => {
+item.addEventListener('click', () => {
+  const faqItem = item.parentElement;
+  const answer = item.nextElementSibling;
+  const icon = item.querySelector('.icon');
+  
+  // Toggle active class
+  faqItem.classList.toggle('active');
+  answer.classList.toggle('active');
+  
+  // Toggle plus/minus icon
+  if (faqItem.classList.contains('active')) {
+      icon.src = ' {{ asset('frontend/Brandflaire/assest/images/minus.png')}}';
+      icon.classList.remove('plus');
+      icon.classList.add('minus');
+  } else {
+      icon.src = ' {{ asset('frontend/Brandflaire/assest/images/plus.png')}}';
+      icon.classList.remove('minus');
+      icon.classList.add('plus');
+  }
+});
+});
+
+</script>
 @endsection
 
 @section('script')

@@ -42,7 +42,7 @@ class ContactUSController extends Controller
 
         $todaySubmissions = ContactUs::ipSubmissionsToday($ip);
 
-        if ($todaySubmissions >= 4) {
+        if ($todaySubmissions >= 34) {
             Flash::warning('Daily submission limit reached. Please try again tomorrow.');
             throw new \Exception('Daily submission limit reached. Please try again tomorrow.');
         }
@@ -52,66 +52,76 @@ class ContactUSController extends Controller
 
 
     public function contactSaveData(Request $request)
-{
-    try {
-        $this->validateRequest($request);
-
-        if (!$request->input('h-captcha-response')) {
-            session()->flash('flash_error', 'Please complete the captcha verification');
-            return back()->withInput();
-        }
-
-        $this->verifyCaptcha($request);
-
-        try {
-            $ip = $this->validateIpSubmissions($request);
-        } catch (\Exception $e) {
-            // Specifically catch and display the IP submission limit error
-            if (strpos($e->getMessage(), 'Daily submission limit reached') !== false) {
-                session()->flash('flash_error', $e->getMessage());
+        {
+            
+            
+            try {
+                $this->validateRequest($request);
+                
+            
+        
+                    if (!$request->input('h-captcha-response')) 
+                    {
+                        session()->flash('flash_error', 'Please complete the captcha verification');
+                        return back()->withInput();
+                    }
+            
+            
+                    $this->verifyCaptcha($request);
+            
+                    try 
+                    {
+                        $ip = $this->validateIpSubmissions($request);
+                    } catch (\Exception $e) {
+                        // Specifically catch and display the IP submission limit error
+                        if (strpos($e->getMessage(), 'Daily submission limit reached') !== false) 
+                        {
+                            session()->flash('flash_error', $e->getMessage());
+                            return back()->withInput();
+                        }
+                        throw $e; // Re-throw if it's a different error
+                    }
+        
+                $contactData = $this->processContactData($request);
+                $attachment = $this->handleFileUpload($request);
+        
+                
+        
+                // Add IP and timestamp to contact data
+                $contactData['ip_address'] = $ip;
+                $contactData['submitted_at'] = Carbon::now();
+        
+                DB::transaction(function () use ($contactData, $attachment) {
+                    ContactUs::create(array_merge($contactData, ['attachment' => $attachment]));
+        
+                    // Send email to admin
+                    $this->emailService->send(
+                        'contact',
+                        $contactData,
+                        env('ADMIN_EMAIL', 'support@lingosphere.co'),
+                        $this->getEmailSubject($contactData['from_page'])
+                    );
+        
+                    // Send acknowledgement to user
+                    $this->emailService->send(
+                        'acknowledge',
+                        $contactData,
+                        $contactData['email'],
+                        'Thank you for contacting us'
+                    );
+                });
+        
+                session()->flash('flash_success', 'Your message has been sent successfully!');
+                return back()->with($this->getSuccessMessage($request->from_page));
+            } catch (ValidationException $e) {
+                session()->flash('flash_error', 'Please check your input and try again.');
+                return back()->withErrors($e->errors())->withInput();
+            } catch (\Exception $e) {
+                Log::error('Contact form submission error: ' . $e->getMessage());
+                session()->flash('flash_error', 'Unable to process your request. Please try again later.');
                 return back()->withInput();
             }
-            throw $e; // Re-throw if it's a different error
         }
-
-        $contactData = $this->processContactData($request);
-        $attachment = $this->handleFileUpload($request);
-
-        // Add IP and timestamp to contact data
-        $contactData['ip_address'] = $ip;
-        $contactData['submitted_at'] = Carbon::now();
-
-        DB::transaction(function () use ($contactData, $attachment) {
-            ContactUs::create(array_merge($contactData, ['attachment' => $attachment]));
-
-            // Send email to admin
-            $this->emailService->send(
-                'contact',
-                $contactData,
-                env('ADMIN_EMAIL', 'support@lingosphere.co'),
-                $this->getEmailSubject($contactData['from_page'])
-            );
-
-            // Send acknowledgement to user
-            $this->emailService->send(
-                'acknowledge',
-                $contactData,
-                $contactData['email'],
-                'Thank you for contacting us'
-            );
-        });
-
-        session()->flash('flash_success', 'Your message has been sent successfully!');
-        return back()->with($this->getSuccessMessage($request->from_page));
-    } catch (ValidationException $e) {
-        session()->flash('flash_error', 'Please check your input and try again.');
-        return back()->withErrors($e->errors())->withInput();
-    } catch (\Exception $e) {
-        Log::error('Contact form submission error: ' . $e->getMessage());
-        session()->flash('flash_error', 'Unable to process your request. Please try again later.');
-        return back()->withInput();
-    }
-}
 
 
     private function validateRequest(Request $request)
