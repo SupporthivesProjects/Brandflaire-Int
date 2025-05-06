@@ -136,7 +136,7 @@ Route::middleware(['admin.log'])->group(function () {
 
         Route::resource('purchase_history', PurchaseHistoryController::class);
         Route::post('/purchase_history/details', [PurchaseHistoryController::class, 'purchase_history_details'])->name('purchase_history.details');
-        Route::get('/purchase_history/destroy/{id}', [PurchaseHistoryController::class, 'destroy'])->name('purchase_history.destroy');
+        //Route::get('/purchase_history/destroy/{id}', [PurchaseHistoryController::class, 'destroy'])->name('purchase_history.destroy');
     });
 
    
@@ -188,3 +188,24 @@ Route::get('/test-500', function() {
 Route::get('/test-403', function() {
     abort(403);
 });
+
+Route::get('/cookie-dump', function () {
+    return response()->json([
+        'configured_cookie_name' => config('session.cookie'),
+        'configured_session_domain' => config('session.domain'),
+        'session_id' => session()->getId(),
+        'session_data' => session()->all(),
+        'request_all_cookies' => request()->cookies->all(),  // <- shows all cookies sent by browser
+    ]);
+});
+
+Route::get('/session-test', function () {
+    session(['test_key' => 'test_value']);
+    return 'Session set.';
+});
+
+Route::get('/session-read', function () {
+    return session('test_key', 'No session value');
+});
+
+

@@ -2,6 +2,7 @@
 
 namespace App\Http\Controllers;
 
+use Illuminate\Support\Facades\Http;
 use Illuminate\Http\Request;
 use App\Models\ContactUs;
 use App\Services\EmailService;
@@ -51,65 +52,66 @@ class ContactUSController extends Controller
 
 
     public function contactSaveData(Request $request)
-    {
-        try {
-            $this->validateRequest($request);
+{
+    try {
+        $this->validateRequest($request);
 
-            // if (!$request->input('h-captcha-response')) {
-            //     Flash::error('Please complete the captcha verification');
-            //     return back()->withInput();
-            // }
-             $this->verifyCaptcha($request);
-
-            try {
-                $ip = $this->validateIpSubmissions($request);
-            } catch (\Exception $e) {
-                // Specifically catch and display the IP submission limit error
-                if (strpos($e->getMessage(), 'Daily submission limit reached') !== false) {
-                    Flash::warning($e->getMessage());
-                    return back()->withInput();
-                }
-                throw $e; // Re-throw if it's a different error
-            }
-
-            $contactData = $this->processContactData($request);
-            $attachment = $this->handleFileUpload($request);
-
-            // Add IP and timestamp to contact data
-            $contactData['ip_address'] = $ip;
-            $contactData['submitted_at'] = Carbon::now();
-
-            DB::transaction(function () use ($contactData, $attachment) {
-                ContactUs::create(array_merge($contactData, ['attachment' => $attachment]));
-
-                // Send email to admin
-                $this->emailService->send(
-                    'contact',
-                    $contactData,
-                    env('ADMIN_EMAIL', 'support@lingosphere.co'),
-                    $this->getEmailSubject($contactData['from_page'])
-                );
-
-                // Send acknowledgement to user
-                $this->emailService->send(
-                    'acknowledge',
-                    $contactData,
-                    $contactData['email'],
-                    'Thank you for contacting us'
-                );
-            });
-
-            Flash::success('Your message has been sent successfully!');
-            return back()->with($this->getSuccessMessage($request->from_page));
-        } catch (ValidationException $e) {
-            Flash::error('Please check your input and try again.');
-            return back()->withErrors($e->errors())->withInput();
-        } catch (\Exception $e) {
-            Log::error('Contact form submission error: ' . $e->getMessage());
-            Flash::error('Unable to process your request. Please try again later.');
+        if (!$request->input('h-captcha-response')) {
+            session()->flash('flash_error', 'Please complete the captcha verification');
             return back()->withInput();
         }
+
+        $this->verifyCaptcha($request);
+
+        try {
+            $ip = $this->validateIpSubmissions($request);
+        } catch (\Exception $e) {
+            // Specifically catch and display the IP submission limit error
+            if (strpos($e->getMessage(), 'Daily submission limit reached') !== false) {
+                session()->flash('flash_error', $e->getMessage());
+                return back()->withInput();
+            }
+            throw $e; // Re-throw if it's a different error
+        }
+
+        $contactData = $this->processContactData($request);
+        $attachment = $this->handleFileUpload($request);
+
+        // Add IP and timestamp to contact data
+        $contactData['ip_address'] = $ip;
+        $contactData['submitted_at'] = Carbon::now();
+
+        DB::transaction(function () use ($contactData, $attachment) {
+            ContactUs::create(array_merge($contactData, ['attachment' => $attachment]));
+
+            // Send email to admin
+            $this->emailService->send(
+                'contact',
+                $contactData,
+                env('ADMIN_EMAIL', 'support@lingosphere.co'),
+                $this->getEmailSubject($contactData['from_page'])
+            );
+
+            // Send acknowledgement to user
+            $this->emailService->send(
+                'acknowledge',
+                $contactData,
+                $contactData['email'],
+                'Thank you for contacting us'
+            );
+        });
+
+        session()->flash('flash_success', 'Your message has been sent successfully!');
+        return back()->with($this->getSuccessMessage($request->from_page));
+    } catch (ValidationException $e) {
+        session()->flash('flash_error', 'Please check your input and try again.');
+        return back()->withErrors($e->errors())->withInput();
+    } catch (\Exception $e) {
+        Log::error('Contact form submission error: ' . $e->getMessage());
+        session()->flash('flash_error', 'Unable to process your request. Please try again later.');
+        return back()->withInput();
     }
+}
 
 
     private function validateRequest(Request $request)
@@ -137,28 +139,48 @@ class ContactUSController extends Controller
         }
     }
 
-    private function verifyCaptcha(Request $request)
+    public function verifyCaptcha(Request $request)
     {
-        try {
-            $client = new \GuzzleHttp\Client([
-                'verify' => base_path('cacert.pem')
-            ]);
-            $response = $client->post('https://hcaptcha.com/siteverify', [
-                'form_params' => [
-                    'secret' => env('H_CAPTCHA_SECRET_KEY'),
-                    'response' => $request->input('h-captcha-response'),
-                    'remoteip' => $request->ip()
-                ]
-            ]);
-
-            if (!json_decode($response->getBody())->success) {
-                throw new \Exception('Captcha verification failed');
-            }
-        } catch (\Exception $e) {
-            Log::error('Captcha verification error: ' . $e->getMessage());
-            throw new \Exception('Unable to verify captcha. Please try again.');
+        $response = $request->input('h-captcha-response');
+        $secret = config('services.hcaptcha.secret_key'); // or use env() in controller
+    
+        $verify = Http::asForm()->post('https://hcaptcha.com/siteverify', [
+            'secret' => $secret,
+            'response' => $response,
+            'remoteip' => $request->ip(),
+        ]);
+    
+        $result = $verify->json();
+    
+        if (!isset($result['success']) || $result['success'] !== true) {
+            throw new \Exception('Captcha verification failed.');
         }
     }
+
+
+
+    // private function verifyCaptcha(Request $request)
+    // {
+    //     try {
+    //         $client = new \GuzzleHttp\Client([
+    //             'verify' => base_path('cacert.pem')
+    //         ]);
+    //         $response = $client->post('https://hcaptcha.com/siteverify', [
+    //             'form_params' => [
+    //                 'secret' => env('H_CAPTCHA_SECRET_KEY'),
+    //                 'response' => $request->input('h-captcha-response'),
+    //                 'remoteip' => $request->ip()
+    //             ]
+    //         ]);
+
+    //         if (!json_decode($response->getBody())->success) {
+    //             throw new \Exception('Captcha verification failed');
+    //         }
+    //     } catch (\Exception $e) {
+    //         Log::error('Captcha verification error: ' . $e->getMessage());
+    //         throw new \Exception('Unable to verify captcha. Please try again.');
+    //     }
+    // }
 
 
     private function handleFileUpload(Request $request)
@@ -166,9 +188,9 @@ class ContactUSController extends Controller
         try {
             if (!$request->hasFile('document')) {
                 // For service page form, document is required
-                // if ($request->from_page == 'service') {
-                //     throw new \Exception('Document upload is required');
-                // }
+                if ($request->from_page == 'service') {
+                    throw new \Exception('Document upload is required');
+                }
                 return null;
             }
 

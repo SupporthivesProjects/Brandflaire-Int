@@ -4,7 +4,7 @@
     
 <section class="login-section">
     <img src="{{ asset('frontend/Brandflaire/assest/images/sign-up.png') }}" alt="" class="img-fluid bg-image d-none d-lg-block d-md-block">
-    <div class="container">
+    <div class="container sign-up">
       <div class="row connn">
         <div class="col" style="padding: 0px;">
             <img src="{{ asset('frontend/Brandflaire/assest/images/sign-up-mob.png') }}" alt="" class="img-fluid bg-image d-block d-lg-none d-md-none mobile-img" style="position: relative;">

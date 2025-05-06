@@ -36,10 +36,10 @@
             @php
                 $total=0;
             @endphp
-            @foreach ($order->orderDetails as $key => $orderDetail)
+            @foreach ($order as $key => $orderDetail)
             @php
-                $product = \App\Models\Product::find($orderDetail->product->id);
-                $total = $total + round(convert_price($orderDetail->price),2);                           
+               $product = \App\Models\Product::find($orderDetail->product->id);
+               $total = $total + round(convert_price($orderDetail->price),2);                           
             @endphp
             <div class="cart_inner">
               <div class="cart_inner_top">
@@ -48,11 +48,11 @@
                 </div>
                 <div class="cart_inner_right">
                   <p class="cart_prod_price">{{ single_price($orderDetail->price) }}</p>
-                  <img src="{{ asset('frontend/Brandflaire/assest/images/del.svg') }}" alt="" class="img-fluid">
+                  <!--<img src="{{ asset('frontend/Brandflaire/assest/images/del.svg') }}" alt="" class="img-fluid">-->
                 </div>
               </div>
               <div class="cart_inner_bottom">
-                <p class="cart_duration">1 Month</p>
+                <p class="cart_duration">{{ $product->subscription }}</p>
               </div>
             </div>
             <div class="cart_stroke"></div>

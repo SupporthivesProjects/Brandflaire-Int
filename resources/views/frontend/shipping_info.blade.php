@@ -36,23 +36,32 @@
                             <input type="hidden" class="form-control" form="shippingAddress" name="email"
                                 value="{{ $user->email }}" required />
                             <input type="hidden" form="shippingAddress" name="checkout_type" value="logged">
+                            
                             <input type="text" form="shippingAddress" class="form-control inpi_boxx" name="name"
                             id="name" value="{{ $lastBillingAddress->name ?? '' }}" required placeholder="First Name">
+                            
                             <input type="text" form="shippingAddress" class="form-control inpi_boxx" name="lname"
                             id="lname" value="{{ $lastBillingAddress->lname ?? '' }}" required placeholder="Last Name">
+                            
                             <input type="tel" form="shippingAddress" class="form-control inpi_boxx" name="phone"
                             id="phone" value="{{ $lastBillingAddress->phone ?? '' }}" required placeholder="Phone">
+                            
                             <input type="date" form="shippingAddress" class="form-control inpi_boxx" value="{{ $lastBillingAddress->dob ?? '' }}" 
                             id="dob" name="dob" 
                              max="{{ date('Y-m-d', strtotime('18 years ago')) }}" required placeholder="Date Of Birth">
+                             
                             <input type="text" form="shippingAddress" class="form-control inpi_boxx" name="address"
                             id="address" value="{{ $lastBillingAddress->address ?? '' }}" required placeholder="Address Line 1">
+                            
                             <input type="text" form="shippingAddress" class="form-control inpi_boxx" name="addressL2"
                             id="addressL2" value="{{ $lastBillingAddress->addressL2 ?? '' }}" placeholder="Address Line 2">
+                            
                             <input type="text" form="shippingAddress" class="form-control inpi_boxx" name="city"
                             id="city" value="{{ $lastBillingAddress->city ?? '' }}" required placeholder="City">
+                            
                             <input type="text" form="shippingAddress" class="form-control inpi_boxx" name="postal_code"
                             id="postal_code" value="{{ $lastBillingAddress->postal_code ?? '' }}" required placeholder="Postcode">
+                            
                             <div class="spilt_imput">
                                 <select class="form-select inpi_boxx" aria-label="Default select example" id="country" name="country" form="shippingAddress" required>
                                     @foreach (\App\Models\Country::all() as $key => $country)
@@ -71,7 +80,7 @@
                                     <a href="{{ route('privacypolicy') }}" class="odd">Privacy Policy.</a>
                                 </label>
                             </div>
-                            <div class="g-recaptcha" data-sitekey="6LcSKScrAAAAAFTPINNesDgJDwJdGKL3VShi-QvA" form="shippingAddress"></div>
+                            <div class="h-captcha mx-auto my_mob_24" data-sitekey="{{ env('H_CAPTCHA_SITE_KEY') }}" form="shippingAddress"></div>
                         </div>
                         @endif
                     </form>
@@ -206,7 +215,7 @@
         }
     </script>
 
-<script>
+{{--<script>
     function check_agree(form) {
         var response = grecaptcha.getResponse(); 
 
@@ -230,6 +239,33 @@
             }
             return false;  
         }
+    }
+</script>--}}
+
+<script>
+    function check_agree(form) {
+        const termsAccepted = form.terms.checked;
+        const hcaptchaResponse = document.querySelector('[name="h-captcha-response"]')?.value;
+
+        if (!termsAccepted) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please accept the Terms & Conditions.'
+            });
+            return false;
+        }
+
+        if (!hcaptchaResponse) {
+            Swal.fire({
+                icon: 'error',
+                title: 'Oops...',
+                text: 'Please complete the CAPTCHA.'
+            });
+            return false;
+        }
+
+        return true;
     }
 </script>
 @endsection

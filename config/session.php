@@ -58,9 +58,11 @@ return [
     | location may be specified. This is only needed for file sessions.
     |
     */
-
+/*
     'files' => storage_path('framework/sessions'),
+*/
 
+    'files' => storage_path('framework/brandflaire-sessions'),
     /*
     |--------------------------------------------------------------------------
     | Session Database Connection
@@ -125,11 +127,14 @@ return [
     | new session cookie is created by the framework for every driver.
     |
     */
-
+/*
     'cookie' => env(
         'SESSION_COOKIE',
         Str::slug(env('APP_NAME', 'laravel'), '_').'_session'
     ),
+*/
+
+    'cookie' => env('SESSION_COOKIE', 'brandflaire_session'),
 
     /*
     |--------------------------------------------------------------------------
@@ -141,8 +146,11 @@ return [
     | your application but you are free to change this when necessary.
     |
     */
-
+/*
     'path' => '/',
+*/
+
+    'path' => env('SESSION_PATH', '/Brandflaire-Int'),
 
     /*
     |--------------------------------------------------------------------------
@@ -155,7 +163,7 @@ return [
     |
     */
 
-    'domain' => env('SESSION_DOMAIN'),
+    'domain' => env('SESSION_DOMAIN',null),
 
     /*
     |--------------------------------------------------------------------------

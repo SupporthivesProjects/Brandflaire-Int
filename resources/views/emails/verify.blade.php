@@ -33,10 +33,13 @@
                                 <td align="center">
                                     <h2>Hi {{ $user->name }},</h2>
                                         <p>Thanks for registering! Please verify your email address to get started.</p>
-                                        
-                                        <a href="{{ url('verify-email/' . $token) }}" class="button">
-                                            Verify Email Address
-                                        </a>
+                                        <table width="100%" cellspacing="0" cellpadding="10" border="0" style="border-collapse: collapse;margin-top:24px;">
+                                            <td align="center">
+                                                <!--[if mso]><v:roundrect xmlns:v="urn:schemas-microsoft-com:vml" xmlns:w="urn:schemas-microsoft-com:office:word" href="{{ url('verify-email/' . $token) }}" style="margin-bottom:25px;margin-top:10px;height:50px; v-text-anchor:middle; width:190px;" arcsize="0%"  stroke="f" fillcolor="#D4B88E"><w:anchorlock/><center style="padding-top:20px;padding-bottom:20px;color:#000000;font-size:20px"><![endif]-->
+                                                    <a href="{{ url('verify-email/' . $token) }}" style="color:#FFFFFF;background:#1C1F26;padding:12px 24px;font-size: 12px;font-weight:600;text-decoration:none;font-family:Arial;line-height:22px;border-radius:80px;text-transform:capitalize;">Verify Email Address</a>
+                                                <!--[if mso]></center></v:roundrect><![endif]-->
+                                            </td>   
+                                       </table> 
 
                                         <p>If you did not create an account, no further action is required.</p>
                                 </td>      

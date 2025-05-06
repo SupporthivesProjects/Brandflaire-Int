@@ -1,6 +1,6 @@
 @php
-    $order = $emailData['order'];
-    $shipping_address = json_decode($order->shipping_address);
+    $order = $emailData['data']['order'];
+    $shipping_address = $order->shipping_address;
 @endphp
 
 
@@ -17,7 +17,7 @@
                     <!-- Header -->
                         <tr>
                             <td style="padding: 0px;">
-                                <img src=""{{ asset('frontend/Brandflaire/assest/images/email-header.png') }}" alt="" style="margin: auto; display: block;height:79px;">
+                                <img src="{{ asset('frontend/Brandflaire/assest/images/email-header.png') }}" alt="" style="margin: auto; display: block;height:79px;">
                             </td>
                         </tr>
                     <!-- Header End -->
@@ -57,27 +57,25 @@
                                 </tr>
                             </table>
                             <table style="margin-top:40px;background: #F3F3F3;padding:24px;border: 1px solid #DEE5ED;border-radius: 10px;">
-                                @php
-                                    $total = 0; 
-                                @endphp
-                                @foreach ($order as $key => $orderDetail)
+                                @php $total = 0; @endphp
+                                @foreach ($order->orderDetails as $orderDetail)
                                     @if($orderDetail->product != null)
                                         @php
                                             $product = \App\Models\Product::find($orderDetail->product->id);
-                                            $total = $total + round(convert_price($orderDetail->price), 2);
+                                            $total += round(convert_price($orderDetail->price), 2);
                                         @endphp
                                 <tr>
                                    <td style="width: 401px;">
                                         <p style="font-family: Arial;font-weight:400;font-size: 18px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;">
-                                           <b>{{ $orderDetail->product->name }}</b>
+                                           <b>{{ $product->name }}</b>
                                         </p>
                                         <p style="font-family: Arial;font-weight:400;font-size: 18px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #656565;margin: 0px;">
-                                            {{ $orderDetail->product->subscription }}
+                                            {{ $product->subscription }}
                                         </p>
                                    </td>
                                    <td>
                                         <p style="font-family: Arial;font-weight:400;font-size: 18px;line-height: 27px;letter-spacing: 0px;vertical-align: middle;color: #1C1F26;margin: 0px;">
-                                            {{ single_price($orderDetail->price) }}
+                                           {{ single_price($orderDetail->price) }}
                                         </p>
                                    </td> 
                                 </tr>
@@ -109,7 +107,7 @@
                     <td>
                         <table width="100%" cellspacing="0" cellpadding="" border="0px" style="border-collapse: collapse;"> 
                             <tr style=" background:#1C1F26;height:157px;padding:50px;background-size:cover;">
-                                <td style="text-align:center;"><img src=""{{ asset('frontend/Brandflaire/assest/images/Logo.png') }}" alt="">
+                                <td style="text-align:center;"><img src="{{ asset('frontend/Brandflaire/assest/images/Logo.png') }}" alt="">
                                
                                 </td> 
                                 <td style="text-align:right;">

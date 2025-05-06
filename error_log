@@ -1,0 +1,40 @@
+[03-May-2025 14:13:54 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:13:54 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:13:58 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:13:58 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:02 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:02 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:07 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:07 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:10 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:47 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:14:47 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:20:10 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:20:10 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:20:30 UTC] PHP Warning:  require(/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php): Failed to open stream: No such file or directory in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18
+[03-May-2025 14:20:30 UTC] PHP Fatal error:  Uncaught Error: Failed opening required '/home/githubproject/public_html/Brandflaire-Int/vendor/autoload.php' (include_path='.:/opt/cpanel/ea-php82/root/usr/share/pear') in /home/githubproject/public_html/Brandflaire-Int/artisan:18
+Stack trace:
+#0 {main}
+  thrown in /home/githubproject/public_html/Brandflaire-Int/artisan on line 18

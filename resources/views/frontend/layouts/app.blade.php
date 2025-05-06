@@ -13,9 +13,12 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
     <title>BrandFlaire</title>
 
     <!-- Favicon -->
-    <link rel="icon" type="image/x-icon" href="#">
+    <link rel="icon" type="image/x-icon" href="{{ asset('frontend/Brandflaire/assest/images/brand.svg') }}">
 
-    <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+    <!-- SweetAlert2 CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/sweetalert2@11/dist/sweetalert2.min.css" rel="stylesheet">
+
+
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
 
     <!-- Essential CSS -->
@@ -203,7 +206,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
                Thank you for contacting us! We will get back to you soon.
             </p>
            
-                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="{{ asset('frontend/BrandBeKnown/images/button-arrow.svg') }}" alt=""></button>
+                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="" alt=""></button>
               
           </div>
         </div>
@@ -223,7 +226,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
                Thank you for contacting us! We will get back to you soon.
             </p>
            
-                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="{{ asset('frontend/BrandBeKnown/images/button-arrow.svg') }}" alt=""></button>
+                <button class="primary-btn w-100 plygon-clip w-100" data-bs-dismiss="modal">Okay <img src="" alt=""></button>
               
           </div>
         </div>
@@ -255,6 +258,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
     <script src="{{ asset('frontend/Brandflaire/assest/js/main.js') }}"></script>
 
     <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <!-- SweetAlert2 JS -->
     <script src="https://cdn.jsdelivr.net/npm/sweetalert2@11"></script>
     <script src="https://js.hcaptcha.com/1/api.js" async defer></script>
 
@@ -352,11 +356,11 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
 
         //Change Currency
         $(document).ready(function() {
-            $('#currency_drop a').on('click', function() {
+            $('#currency_drop').on('click', function() {
                 let currency_code = $(this).data('currency');
-
+        
                 $.ajax({
-                    url: '/currency',
+                    url: "{{ url('currency') }}", // dynamically generates the correct full URL
                     type: 'POST',
                     data: {
                         currency_code: currency_code,
@@ -370,6 +374,7 @@ error_reporting(E_ALL & ~E_DEPRECATED & ~E_USER_DEPRECATED);
                 });
             });
         });
+
 
         // mobile currency change 
         $(document).ready(function() {

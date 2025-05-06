@@ -20,8 +20,11 @@
                 pharetra volutpat nibh tempus turpis.</p>
             </div>
           </div>
-          <a class="nav-link btn btn_red" href="{{ route('user.registration')}}">Sign Up</a>
-        </div>
+             <div class="seo_s1btnbar">
+                <button  class="btn custom-btn-img">connect with our team
+                    <img src="https://githubproject.supporthives.com/Brandflaire-Int/public/frontend/Brandflaire/assest/images/seo_s1btnarrow.svg" alt="arrow" class="arrow-img">
+                </button>
+            </div>        </div>
       </section>
       <section class="abou2">
         <div class="container px-0">
